@@ -103,7 +103,7 @@ header a:hover{
     font-size: 1.75em;
 }
 
-#sobre-mi .container{
+.sobre-mi .container{
     text-align: center;
     padding: 200px 12px;
 }
@@ -164,16 +164,6 @@ header a:hover{
 
 }
 
-#caracteristicas .container{
-    text-align: center;
-    padding: 250px 12px;
-}
-
-#caracteristicas li{
-    margin: 16px 0px;
-    font-weight: bold;
-}
-
 #final{
     display: flex;
     flex-direction: column;
@@ -231,12 +221,12 @@ footer .container{
         font-size: 5em;
     }
 
-    #sobre-mi .container{
+    .sobre-mi .container{
         display: flex;
         justify-content: space-evenly;
     }
 
-    #sobre-mi .texto{
+    .sobre-mi .texto{
         width: 50%;
         max-width: 600px;
         text-align: initial;
@@ -246,12 +236,21 @@ footer .container{
         justify-content: center;
     }
 
-    #sobre-mi h2{
+    .sobre-mi h2{
         margin-top: 0px;
     }
 
-    #sobre-mi .img-container{
+    .sobre-mi .img-container1{
         background-image: url("media/yo.png");
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px; 
+    }
+
+    .sobre-mi .img-container2{
+        background-image: url("media/yo2.jpg");
         border-radius: 20px;
         background-size: cover;
         background-position: center center;
@@ -314,21 +313,6 @@ footer .container{
         ,url("media/wordle.jpg");
     }
 
-    #caracteristicas{
-        background-image: url("media/caracteristicas.jpg");
-        background-repeat: no-repeat;
-        background-size: 650px 400px;
-        background-position: calc(100vw - 500px) 120px;
-    }
-
-    #caracteristicas .container{
-        text-align: initial;
-    }
-
-    #caracteristicas ul{
-        margin-left: 100px;
-    }
-
     #final h2{
         font-size: 5em;
     }
@@ -339,11 +323,5 @@ footer .container{
 
     footer .container{
         justify-content: flex-end;
-    }
-}
-
-@media (min-width: 1200px) {
-    #caracteristicas{
-        background-position-x: calc(100vw - 800px);
     }
 }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Joaquin Tonizzo</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -13,7 +15,7 @@
             <nav>
                 <a href="#sobre-mi">Sobre mi</a>
                 <a href="#mis-proyectos">Mis Proyectos</a>
-                <a href="#caracteristicas">Características</a>
+                <a href="#habilidades">Habilidades</a>
                 <a href="#final">Contacto</a>
             </nav>
         </div>
@@ -21,15 +23,25 @@
 
     <section id="hero">
         <h1>Joaquin Tonizzo <br>Técnico en Sistemas <br>Desarrollador Full-Stack</h1>
-        <button>Ir a mi CV</button>
+        <button onclick="abrirCV()">Ir a mi CV</button>
+        <script>
+            function abrirCV() {
+                window.open('media/cv.pdf', '_blank');
+            }
+        </script>
     </section>
 
-    <section id="sobre-mi">
+
+    <section id="sobre-mi" class="sobre-mi">
         <div class="container">
-            <div class="img-container"></div>
+            <div class="img-container1"></div>
             <div class="texto">
                 <h2>Hola <span class="color-acento">soy Joaquin!</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit veritatis a autem sed dignissimos commodi, voluptas incidunt voluptatibus cum, quia neque nulla consequatur laborum accusamus, perspiciatis odio nemo minus vel!</p>
+                <p>Soy Técnico especializado en Electrónica, egresado del Instituto Cardenal Stepinac. Durante mi
+                    formación adquirí amplios conocimientos en las áreas de la electrónica, la Informática y la
+                    computación. Actualmente estoy estudiando la carrera Licenciatura en Sistemas en la Universidad
+                    Nacional de General Sarmiento.
+                </p>
             </div>
         </div>
     </section>
@@ -40,38 +52,56 @@
             <div class="programas">
                 <div class="carta">
                     <h3>Lost Galaxian - Java</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus?</p>
-                    <button>+ Info</button>
+                    <p>
+                        "Lost Galaxian" es un juego Java de aventuras espaciales donde los jugadores exploran galaxias
+                        perdidas enfrentándose a desafíos, enemigos y distintas amenazas con el objetivo de sobrevivir y
+                        eliminar a todos los adversarios en pantalla antes de que sea tarde.</p>
+                    <form action="https://github.com/JoaquinTonizzo/Proyecto-P1" target="_blank">
+                        <button>+ Info</button>
+                    </form>
                 </div>
                 <div class="carta">
                     <h3>Gestion de Paquetes - Java</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus?</p>
-                    <button>+ Info</button>
+                    <p>Una aplicación que utiliza principios de programación orientada a objetos, como herencia y
+                        polimorfismo, abstracción e interfaces para optimizar el registro de pedidos, la gestión de
+                        paquetes y su entrega. Creando una solución eficiente, flexible y escalable.</p>
+                    <form action="https://github.com/JoaquinTonizzo/Proyecto-P2" target="_blank">
+                        <button>+ Info</button>
+                    </form>
                 </div>
                 <div class="carta">
                     <h3>Wordle Game - Python</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus?</p>
-                    <button>+ Info</button>
-                </div>  
+                    <p>"Wordle Game" es un proyecto en Python que ofrece una experiencia envolvente y divertida. Desafía
+                        tus habilidades lingüísticas al intentar adivinar palabras ocultas. Este proyecto refleja
+                        lacapacidad para crear aplicaciones interactivas y entretenidas en Python, un leguanje muy
+                        versártil.</p>
+                    <form action="https://github.com/JoaquinTonizzo/Proyecto-IP" target="_blank">
+                        <button>+ Info</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="caracteristicas">
+    <section id="habilidades" class="sobre-mi">
         <div class="container">
-            <ul>
-                <li>⭐​ SKILLS</li>
-                <li>✔️ JAVA</li>
-                <li>✔️ HTML - CSS</li>
-                <li>✔️ JAVASCRIPT</li>
-                <li>✔️ REACT JS</li>
-            </ul>
+            <div class="texto">
+                <h2>Mis <span class="color-acento">habilidades!</span></h2>
+                <p>En cuanto a aptitudes y habilidades técnicas, poseo un dominio avanzado de Microsoft Office y Google
+                    Workspace. Mi experiencia sólida en desarrollo de software abarca tanto Java como Python. Además, me
+                    destaco en el diagnóstico y reparación de hardware y software de computadoras, con una amplia
+                    experiencia en entornos Windows, macOS y Linux.
+                </p>
+            </div>
+            <div class="img-container2"></div>
         </div>
     </section>
 
     <section id="final">
         <h2>Contancto</h2>
-        <button>Enviar un mensaje</button>
+        <form action="https://wa.me/1169702939" target="_blank">
+            <button>Enviar un mensaje</button>
+        </form>
     </section>
 
     <footer>
@@ -79,5 +109,6 @@
             <p>&copy; Joaquin Tonizzo 2023</p>
         </div>
     </footer>
+    
 </body>
 </html>

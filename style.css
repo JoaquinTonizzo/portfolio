@@ -11,15 +11,15 @@ body{
     margin: 0;
 }
 
-h1{ font-size: 2.7em;}
-h2{ font-size: 2.5em;}
+h1{ font-size: 2rem;}
+h2{ font-size: 2em;}
 h3{ font-size: 2em;}
 p{ font-size: 1.25em;}
 ul{ list-style: none;}
-li{ font-size: 1.25em;}
+li{ font-size: 1.25rem;}
 
 button{
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: bold;
     padding: 10px 30px;
     border-radius: 5px;
@@ -100,7 +100,7 @@ header a:hover{
 }
 
 #hero button{
-    font-size: 1.75em;
+    font-size: 1.1em;
 }
 
 .sobre-mi .container{
@@ -319,6 +319,10 @@ footer .container{
 
     #final button{
         font-size: 2em;
+    }
+
+    #hero button{
+        font-size: 1.5em;
     }
 
     footer .container{

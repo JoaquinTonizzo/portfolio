@@ -34,6 +34,8 @@ header {
 
 .menu-button{
     border: none;
+    background-color: white;
+    margin-right: 10px;
 }
 
 .menu-button:focus{
@@ -171,6 +173,7 @@ footer {
 footer div {
     display: flex;
     flex-direction: column;
+    gap: 10px
 }
 
 footer div a {
@@ -192,6 +195,7 @@ footer div a:hover {
         width: 100vw;
         flex-grow: 0;
         align-items: center;
+        padding-bottom: 10px;
     }
 
     #sobre-mi {
@@ -211,9 +215,9 @@ footer div a:hover {
         width: 100vw;
     }
 
-    footer {
-        flex-direction: column;
-        gap: 20px
+    #sobre-mi .texto, #habilidades .texto {
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
 }

@@ -61,7 +61,7 @@ header a {
 }
 
 header a:hover, header .logo:hover{
-    color: #909090;
+    color: #dc3545;
 }
 
 #hero{
@@ -161,6 +161,10 @@ header a:hover, header .logo:hover{
     margin: 20px;
 }
 
+.redes img:hover {
+    filter: brightness(70%);
+}
+
 footer {
     padding: 20px 0px;
     display: flex;
@@ -179,12 +183,12 @@ footer div {
 footer div a {
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: white;
     font-weight: 700;
 }
 
 footer div a:hover {
-    color: white;
+    color: #dc3545;
 }
 
 @media (max-width: 767.98px) { 

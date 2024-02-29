@@ -188,7 +188,7 @@ footer div a {
 }
 
 footer div a:hover {
-    color: #dc3545;
+    color: white;
 }
 
 @media (max-width: 767.98px) { 

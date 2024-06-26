@@ -1,6 +1,6 @@
-# Portfolio Simple 🌠​​
+# Portfolio 
 
-## Descripción ⚠️
+## Descripción 🌠​
 
 Este es un portfolio simple creado utilizando HTML, CSS y Bootstrap. Es ideal para mostrar tu información personal, proyectos destacados y habilidades.
 

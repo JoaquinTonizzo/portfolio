@@ -1,230 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
 }
 
-/* Old header styles - commented out for new Tailwind header */
-/*
-header {
-    background-color: #1a1a1a;
+body {
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.container-header {
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+/* Global utility classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-.menu {
-    flex-grow: 0;
-}
-
-.padding-0 {
-    padding: 0
-}
-
-.menu .navbar-nav{
-    align-items: center;
-}
-
-.menu-button{
-    border: none;
-    background-color: white;
-    margin-right: 10px;
-}
-
-.menu-button:focus{
-    box-shadow: none;
-}
-
-.logo {
-    font-weight: 700;
-    color: white;
-    margin-left: 10px;
-}
-
-.navbar-nav{
-    gap: 15px;
-    text-transform: uppercase;
-    margin-right: 10px;
-}
-
-header a {
-    text-decoration: none;
-    font-weight: 700;
-    color: white;
-}
-
-header a:hover, header .logo:hover{
-    color: #dc3545;
-}
-*/
-
-#hero{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 90vh;
-    background: linear-gradient(
-        45deg,
-        #1a1a1a 0%,
-        #2d2d2d 25%,
-        #1a1a1a 50%,
-        #2d2d2d 75%,
-        #1a1a1a 100%
-    );
-    overflow: hidden;
-}
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        45deg,
-        rgba(58, 41, 255, 0.1) 0%,
-        rgba(255, 148, 180, 0.1) 25%,
-        rgba(255, 50, 50, 0.1) 50%,
-        rgba(255, 148, 180, 0.1) 75%,
-        rgba(58, 41, 255, 0.1) 100%
-    );
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
-    z-index: 1;
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-#hero h1, #hero h2 {
-    color: white;
-    font-size: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    margin-bottom: 10px;
-    position: relative;
-    z-index: 2;
-}
-
-#hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-#hero h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    opacity: 0.9;
-}
-
-#hero .btn {
-    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 2;
-}
-
-#hero .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
-}
-
-/* About section styles moved to About.css */
-
-/* Projects section styles moved to Projects.css */
-
-/* Skills section styles moved to Skills.css */
-
-#contacto {
-    text-align: center;
-    background-color: #1a1a1a;
-    color: white;
-}
-
-#contacto h2 {
-    padding: 20px 20px 0px 20px;
-}
-
-.redes img {
-    width: 155px;
-    margin: 20px;
-}
-
-.redes img:hover {
-    filter: brightness(70%);
-}
-
-footer {
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #909090
-}
-
-footer div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px
-}
-
-footer div a {
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    font-weight: 700;
-}
-
-footer div a:hover {
-    color: white;
-}
-
-@media (max-width: 767.98px) { 
-    .menu{
-        position: absolute;
-        top: 75px;
-        background-color: #1a1a1a;
-        width: 100vw;
-        flex-grow: 0;
-        align-items: center;
-        padding-bottom: 10px;
-    }
-
-    /* About responsive styles moved to About.css */
-
-    /* Skills responsive styles moved to Skills.css */
-
-    #contacto {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    .card p {
-        display: none;
-    }
+/* Ensure all sections have proper spacing from fixed header */
+section {
+    scroll-margin-top: 80px;
 }

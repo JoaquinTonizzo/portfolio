@@ -1,10 +1,14 @@
 /* Projects Section Styles */
 #mis-proyectos {
+    min-height: 100vh;
     background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
     color: white;
     padding: 5rem 2rem;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #mis-proyectos::before {

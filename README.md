@@ -1,23 +1,72 @@
-# Portfolio 
+# Portfolio React - Joaquin Tonizzo
 
-## Descripción 🌠​
+Este es mi portfolio personal convertido de HTML/CSS a React con Vite.
 
-Este es un portfolio simple creado utilizando HTML, CSS y Bootstrap. Es ideal para mostrar tu información personal, proyectos destacados y habilidades.
+## 🚀 Tecnologías utilizadas
 
-## Características 🔥
+- React 18
+- Vite
+- Bootstrap 5
+- CSS3
+- JavaScript ES6+
 
-- **Diseño Responsivo:** Compatible con diferentes dispositivos y tamaños de pantalla.
-- **Secciones de Contenido:** Incluye secciones para resumen personal, proyectos, habilidades y contacto.
-- **Estilización Moderna:** Utiliza Bootstrap para un diseño limpio y profesional.
+## 📦 Instalación
 
-## Tecnologías Utilizadas 🛠️
+1. Instala las dependencias:
+```bash
+npm install
+```
 
-- HTML5: Estructura básica y contenido del sitio.
-- CSS3: Estilos y diseño del portfolio.
-- Bootstrap: Framework para el diseño responsive y componentes adicionales.
+2. Ejecuta el servidor de desarrollo:
+```bash
+npm run dev
+```
 
-## Contacto
+3. Abre tu navegador en `http://localhost:5173`
 
-Para más información, puedes contactar a [joaquintonizzo1@gmail.com](mailto:joaquintonizzo1@gmail.com).
+## 🏗️ Scripts disponibles
 
-¡Gracias por tu interés!
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run preview` - Previsualiza la build de producción
+- `npm run lint` - Ejecuta ESLint para revisar el código
+
+## 📁 Estructura del proyecto
+
+```
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Projects.jsx
+│   ├── Skills.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+public/
+├── imágenes y assets
+└── index.html
+```
+
+## 🌐 Secciones
+
+- **Header**: Navegación principal
+- **Hero**: Presentación principal
+- **Sobre Mi**: Información personal y profesional
+- **Proyectos**: Mis trabajos destacados
+- **Habilidades**: Competencias técnicas
+- **Contacto**: Redes sociales y formas de contacto
+- **Footer**: Enlaces adicionales
+
+## 📱 Responsive Design
+
+El portfolio está completamente optimizado para dispositivos móviles y desktop.
+
+## 👨‍💻 Autor
+
+**Joaquin Tonizzo**
+- GitHub: [@JoaquinTonizzo](https://github.com/JoaquinTonizzo)
+- LinkedIn: [Joaquin Tonizzo](https://www.linkedin.com/in/joaquin-tonizzo/)

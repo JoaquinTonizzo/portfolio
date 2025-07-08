@@ -1,0 +1,180 @@
+#hero{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh !important;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    ),
+    linear-gradient(
+        135deg,
+        #1a1a1a 0%,
+        #2d2d2d 50%,
+        #1a1a1a 100%
+    );
+    overflow: hidden;
+}
+
+/* Asegurar que Silk esté en el fondo */
+#hero > div:first-child,
+#hero > div:first-child > div,
+#hero > div:first-child canvas {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+}
+
+#hero canvas {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+}
+
+/* Contenido sobre Silk */
+#hero > h1,
+#hero > h2,
+#hero > button {
+    position: relative;
+    z-index: 2 !important;
+}
+
+#hero h1, #hero h2 {
+    color: white;
+    font-size: 30px;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2 !important;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2 !important;
+}
+
+#hero h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    opacity: 0.95;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2 !important;
+}
+
+#hero h2:last-of-type {
+    margin-bottom: 35px;
+}
+
+#hero .btn {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    box-shadow: 
+        0 8px 25px rgba(220, 53, 69, 0.4),
+        0 0 20px rgba(220, 53, 69, 0.2);
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2 !important;
+}
+
+#hero .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 12px 35px rgba(220, 53, 69, 0.5),
+        0 0 30px rgba(220, 53, 69, 0.3);
+}
+
+/* Contenedor para el contenido de texto */
+.hero-content {
+    position: relative;
+    z-index: 1000 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Forzar que todos los elementos de Three.js estén en el fondo */
+#hero div[style*="position"] {
+    z-index: 1 !important;
+}
+
+#hero div > div {
+    z-index: 1 !important;
+}
+
+/* Asegurar que todo el texto esté visible */
+#hero * {
+    position: relative;
+}
+
+#hero h1, #hero h2, #hero button {
+    z-index: 3 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero {
+        height: 100vh;
+        padding: 0 20px;
+    }
+    
+    #hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+    }
+    
+    #hero h2 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+    
+    #hero h2:last-of-type {
+        margin-bottom: 30px;
+    }
+    
+    #hero .btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    #hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    #hero .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}

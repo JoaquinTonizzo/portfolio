@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
 
 *{
     margin: 0;
@@ -8,6 +11,8 @@
     font-family: Raleway;
 }
 
+/* Old header styles - commented out for new Tailwind header */
+/*
 header {
     background-color: #1a1a1a;
 }
@@ -63,88 +68,96 @@ header a {
 header a:hover, header .logo:hover{
     color: #dc3545;
 }
+*/
 
 #hero{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
     height: 90vh;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("media/hero.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background: linear-gradient(
+        45deg,
+        #1a1a1a 0%,
+        #2d2d2d 25%,
+        #1a1a1a 50%,
+        #2d2d2d 75%,
+        #1a1a1a 100%
+    );
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(58, 41, 255, 0.1) 0%,
+        rgba(255, 148, 180, 0.1) 25%,
+        rgba(255, 50, 50, 0.1) 50%,
+        rgba(255, 148, 180, 0.1) 75%,
+        rgba(58, 41, 255, 0.1) 100%
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    z-index: 1;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #hero h1, #hero h2 {
     color: white;
     font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
 }
 
-#sobre-mi img {
-    width: 50vw;
-    max-height: 100vh;
-}
-
-#sobre-mi .texto {
-    text-align: center;
-    padding: 20px 20px 0px 20px;
-}
-
-#sobre-mi {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-#mis-proyectos {
-    background-color: #1a1a1a;
-    color: white;
-    text-align: center;
-}
-
-#mis-proyectos h2 {
-    padding: 20px;
-}
-
-.card {
-    width: 300px;
-}
-
-.btn {
+#hero h1 {
+    font-size: 3.5rem;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
-#mis-proyectos .programas {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding-bottom: 20px;
+#hero h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0.9;
 }
 
-#habilidades img {
-    width: 50vw;
-    max-height: 100vh;
+#hero .btn {
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
-#habilidades .texto {
-    padding: 20px 20px 0px 20px;
-    text-align: center;
+#hero .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
 }
 
-#habilidades {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+/* About section styles moved to About.css */
+
+/* Projects section styles moved to Projects.css */
+
+/* Skills section styles moved to Skills.css */
 
 #contacto {
     text-align: center;
@@ -202,24 +215,11 @@ footer div a:hover {
         padding-bottom: 10px;
     }
 
-    #sobre-mi {
-        display: flex;
-        flex-direction: column;
-    }
+    /* About responsive styles moved to About.css */
 
-    #sobre-mi img {
-        width: 100vw;
-    }
+    /* Skills responsive styles moved to Skills.css */
 
-    #habilidades {
-        flex-direction: column;
-    }
-
-    #habilidades img {
-        width: 100vw;
-    }
-
-    #sobre-mi .texto, #habilidades .texto, #contacto {
+    #contacto {
         padding-top: 80px;
         padding-bottom: 80px;
     }

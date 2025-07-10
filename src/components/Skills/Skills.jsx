@@ -10,7 +10,7 @@ import {
   SiMysql, SiPostgresql, SiMongodb, SiJquery,
   SiSpring, SiEclipseide
 } from 'react-icons/si';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './Skills.css';
 
 function Skills() {

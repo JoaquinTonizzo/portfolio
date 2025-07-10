@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaGamepad, FaBox, FaBullseye, FaExternalLinkAlt, FaRocket, FaCalendarAlt, FaCheckCircle } from 'react-icons/fa';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './Projects.css';
 
 function Projects() {

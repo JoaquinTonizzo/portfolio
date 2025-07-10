@@ -1,5 +1,5 @@
 import { FaLinkedin, FaWhatsapp, FaTelegram, FaGithub, FaBolt } from 'react-icons/fa';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 import './Footer.css';
 
 function Footer() {

@@ -1,5 +1,5 @@
-import { useLanguage } from '../contexts/LanguageContext';
-import Silk from './Silk';
+import { useLanguage } from '../../contexts/LanguageContext';
+import Silk from '../Silk/Silk';
 import './Hero.css';
 
 function Hero() {

@@ -26,9 +26,7 @@ export const LanguageProvider = ({ children }) => {
       contact: 'Contacto',
       
       // Hero
-      title: 'Técnico en Informática y Electrónica',
-      subtitle: 'Desarrollador Full-Stack',
-      subtitle2: 'Estudiante de Licenciatura en Sistemas',
+      title: 'Técnico Universitario en Informática | Desarrollador Full-Stack | Estudiante de Licenciatura en Sistemas',
       cvButton: 'Curriculum Vitae',
       
       // About
@@ -77,9 +75,7 @@ export const LanguageProvider = ({ children }) => {
       contact: 'Contact',
       
       // Hero
-      title: 'Computer and Electronics Technician',
-      subtitle: 'Full-Stack Developer',
-      subtitle2: 'Systems Engineering Student',
+      title: 'University Computer Technician | Full-Stack Developer | Systems Engineering Student',
       cvButton: 'Resume',
       
       // About
@@ -129,9 +125,7 @@ export const LanguageProvider = ({ children }) => {
       contact: 'Contato',
       
       // Hero
-      title: 'Técnico em Informática e Eletrônica',
-      subtitle: 'Desenvolvedor Full-Stack',
-      subtitle2: 'Estudante de Licenciatura em Sistemas',
+      title: 'Técnico Universitário em Informática | Desenvolvedor Full-Stack | Estudante de Licenciatura em Sistemas',
       cvButton: 'Currículo',
       
       // About

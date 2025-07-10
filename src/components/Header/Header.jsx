@@ -60,7 +60,7 @@ function Header() {
             className="logo"
             onClick={() => scrollToSection('hero')}
           >
-            JOAQUIN TONIZZO
+            JOAQUÍN TONIZZO
           </div>
 
           {/* Desktop Navigation */}

@@ -23,18 +23,21 @@ function Hero() {
                 speed={0.5}
             />
             <div className="hero-content">
-                <h1>Joaquin Gabriel Tonizzo</h1>
-                <h2>{t('title')}</h2>
-                <h2>{t('subtitle')}</h2>
-                <h2>{t('subtitle2')}</h2>
-                <div className="hero-buttons">
-                    <button className="btn btn-danger" onClick={abrirCV}>
-                        {t('cvButton')}
-                    </button>
-                    <button className="btn btn-linkedin" onClick={abrirLinkedIn}>
-                        <FaLinkedin />
-                        LinkedIn
-                    </button>
+                <div className="hero-image">
+                    <img src="/yo.png" alt="Joaquin Gabriel Tonizzo" />
+                </div>
+                <div className="hero-text">
+                    <h1>Joaquín Gabriel Tonizzo</h1>
+                    <h2>{t('title')}</h2>
+                    <div className="hero-buttons">
+                        <button className="btn btn-danger" onClick={abrirCV}>
+                            {t('cvButton')}
+                        </button>
+                        <button className="btn btn-linkedin" onClick={abrirLinkedIn}>
+                            <FaLinkedin />
+                            LinkedIn
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

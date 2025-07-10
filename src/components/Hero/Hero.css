@@ -44,38 +44,42 @@
     position: relative;
     z-index: 2 !important;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.hero-content h1, .hero-content h2 {
+/* Texto del Hero */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1rem;
+}
+
+.hero-text h1, .hero-text h2 {
     color: white;
-    font-size: 30px;
     text-shadow: 
         2px 2px 4px rgba(0, 0, 0, 0.9),
         0 0 20px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
-.hero-content h1 {
-    font-size: 4rem;
+.hero-text h1 {
+    font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 25px;
     letter-spacing: 2px;
 }
 
-.hero-content h2 {
-    font-size: 1.8rem;
+.hero-text h2 {
+    font-size: 1rem;
     font-weight: 300;
     opacity: 0.95;
     letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-.hero-content h2:last-of-type {
-    margin-bottom: 35px;
 }
 
 .hero-content .btn {
@@ -91,6 +95,7 @@
         0 0 20px rgba(0, 102, 255, 0.2);
     transition: all 0.4s ease;
     text-transform: uppercase;
+    color: white;
 }
 
 .hero-content .btn:hover {
@@ -136,34 +141,34 @@
     color: white;
 }
 
-/* Contenedor para el contenido de texto */
-.hero-content {
-    position: relative;
-    z-index: 1000 !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Forzar que todos los elementos de Three.js estén en el fondo */
-#hero div[style*="position"] {
-    z-index: 1 !important;
-}
-
-#hero div > div {
-    z-index: 1 !important;
-}
-
-/* Asegurar que todo el texto esté visible */
-#hero * {
+/* Imagen del Hero */
+.hero-image {
+    flex-shrink: 0;
     position: relative;
 }
 
-#hero h1, #hero h2, #hero button {
-    z-index: 3 !important;
+.hero-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 10px rgba(0, 102, 255, 0.1);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
 }
+
+.hero-image img:hover {
+    transform: scale(1.05);
+    border-color: rgba(0, 102, 255, 0.5);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 0 15px rgba(0, 102, 255, 0.2);
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -172,18 +177,28 @@
         padding: 0 20px;
     }
     
-    #hero h1 {
-        font-size: 2.8rem;
-        margin-bottom: 20px;
+    .hero-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
     }
     
-    #hero h2 {
-        font-size: 1.4rem;
-        margin-bottom: 12px;
+    .hero-text {
+        align-items: center;
+        text-align: center;
     }
     
-    #hero h2:last-of-type {
-        margin-bottom: 30px;
+    .hero-image img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.2rem;
     }
     
     .hero-buttons {
@@ -199,13 +214,18 @@
 }
 
 @media (max-width: 480px) {
-    #hero h1 {
+    .hero-image img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero-text h1 {
         font-size: 2.2rem;
         letter-spacing: 1px;
     }
     
-    #hero h2 {
-        font-size: 1.2rem;
+    .hero-text h2 {
+        font-size: 1rem;
     }
     
     #hero .btn,

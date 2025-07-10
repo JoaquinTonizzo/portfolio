@@ -31,7 +31,7 @@ export const LanguageProvider = ({ children }) => {
       
       // About
       aboutTitle: 'Sobre mí',
-      aboutText: 'Soy Técnico especializado en Electrónica, egresado del Instituto Cardenal Stepinac. Durante mi formación adquirí amplios conocimientos en las áreas de la electrónica, la Informática y la computación. Actualmente estoy estudiando la carrera Licenciatura en Sistemas en la Universidad Nacional de General Sarmiento.',
+      aboutText: '<FaGraduationCap /> Formación Técnica y Universitaria\nTécnico en Electrónica (Instituto Cardenal Stepinac) y Técnico Universitario en Informática (UNGS), actualmente cursando la Licenciatura en Sistemas.\n\n<FaLaptopCode /> Formación en Desarrollo Full Stack\nEstudiante en Coderhouse: finalicé el módulo de Frontend con React y actualmente curso Backend, profundizando en tecnologías web y buenas prácticas de desarrollo.',
       yearsStudying: 'Años estudiando',
       projects: 'Proyectos',
       specializations: 'Especialidades',
@@ -80,7 +80,7 @@ export const LanguageProvider = ({ children }) => {
       
       // About
       aboutTitle: 'About Me',
-      aboutText: 'I am a Technician specialized in Electronics, graduated from Instituto Cardenal Stepinac. During my training, I acquired extensive knowledge in the areas of electronics, computer science, and computing. I am currently studying Systems Engineering at the National University of General Sarmiento.',
+      aboutText: '<FaGraduationCap /> Technical and University Education\nElectronics Technician (Instituto Cardenal Stepinac) and University Computer Technician (UNGS), currently studying Systems Engineering.\n\n<FaLaptopCode /> Full Stack Development Training\nStudent at Coderhouse: completed the Frontend module with React and currently studying Backend, deepening in web technologies and good development practices.',
       yearsStudying: 'Years studying',
       projects: 'Projects',
       specializations: 'Specializations',
@@ -130,7 +130,7 @@ export const LanguageProvider = ({ children }) => {
       
       // About
       aboutTitle: 'Sobre mim',
-      aboutText: 'Sou Técnico especializado em Eletrônica, formado pelo Instituto Cardenal Stepinac. Durante minha formação, adquiri amplos conhecimentos nas áreas de eletrônica, informática e computação. Atualmente estou estudando a Licenciatura em Sistemas na Universidade Nacional de General Sarmiento.',
+      aboutText: '<FaGraduationCap /> Formação Técnica e Universitária\nTécnico em Eletrônica (Instituto Cardenal Stepinac) e Técnico Universitário em Informática (UNGS), atualmente cursando a Licenciatura em Sistemas.\n\n<FaLaptopCode /> Formação em Desenvolvimento Full Stack\nEstudante na Coderhouse: finalizei o módulo de Frontend com React e atualmente curso Backend, aprofundando em tecnologias web e boas práticas de desenvolvimento.',
       yearsStudying: 'Anos estudando',
       projects: 'Projetos',
       specializations: 'Especializações',

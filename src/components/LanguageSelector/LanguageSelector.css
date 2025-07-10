@@ -94,8 +94,8 @@
 }
 
 .language-option.active {
-  background: rgba(123, 116, 129, 0.3);
-  color: #7B7481;
+  background: rgba(0, 102, 255, 0.3);
+  color: #0066FF;
 }
 
 /* Responsive design */

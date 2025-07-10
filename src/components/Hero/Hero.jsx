@@ -1,30 +1,42 @@
 import { useLanguage } from '../../contexts/LanguageContext';
-import Silk from '../Silk/Silk';
+import { FaLinkedin } from 'react-icons/fa';
+import Aurora from '../Aurora/Aurora';
 import './Hero.css';
 
 function Hero() {
     const { t } = useLanguage();
-    
+
     const abrirCV = () => {
         window.open('cv.pdf', '_blank');
     }
 
+    const abrirLinkedIn = () => {
+        window.open('https://www.linkedin.com/in/joaquin-tonizzo/', '_blank');
+    }
+
     return (
         <section id="hero">
-            <Silk
-                speed={5}
-                scale={1}
-                color="#7B7481"
-                noiseIntensity={1.5}
-                rotation={0}
+            <Aurora
+                colorStops={["#0066FF", "#0099FF", "#0033CC"]}
+                blend={0.5}
+                amplitude={0.5}
+                speed={0.5}
             />
-            <h1>Joaquin Gabriel Tonizzo</h1>
-            <h2>{t('title')}</h2>
-            <h2>{t('subtitle')}</h2>
-            <h2>{t('subtitle2')}</h2>
-            <button className="btn btn-danger mt-3" onClick={abrirCV}>
-                {t('cvButton')}
-            </button>
+            <div className="hero-content">
+                <h1>Joaquin Gabriel Tonizzo</h1>
+                <h2>{t('title')}</h2>
+                <h2>{t('subtitle')}</h2>
+                <h2>{t('subtitle2')}</h2>
+                <div className="hero-buttons">
+                    <button className="btn btn-danger" onClick={abrirCV}>
+                        {t('cvButton')}
+                    </button>
+                    <button className="btn btn-linkedin" onClick={abrirLinkedIn}>
+                        <FaLinkedin />
+                        LinkedIn
+                    </button>
+                </div>
+            </div>
         </section>
     )
 }

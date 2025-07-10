@@ -10,19 +10,31 @@ import {
   SiMysql, SiPostgresql, SiMongodb, SiJquery,
   SiSpring, SiEclipseide
 } from 'react-icons/si';
+import { useLanguage } from '../contexts/LanguageContext';
 import './Skills.css';
 
 function Skills() {
+  const { t, language } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
+  const getSkillLevel = (level) => {
+    const levels = {
+      expert: language === 'es' ? 'Experto' : 'Expert',
+      advanced: language === 'es' ? 'Avanzado' : 'Advanced',
+      intermediate: language === 'es' ? 'Intermedio' : 'Intermediate',
+      learning: language === 'es' ? 'Aprendiendo' : 'Learning'
+    };
+    return levels[level] || level;
+  };
+
   const skillCategories = [
     {
       id: 1,
-      title: "Lenguajes de Programación",
+      title: language === 'es' ? "Lenguajes de Programación" : "Programming Languages",
       icon: <FaLaptopCode />,
       technologies: [
         { name: "Java", icon: <FaJava />, level: "expert" },
@@ -35,7 +47,7 @@ function Skills() {
     },
     {
       id: 2,
-      title: "Frameworks & Librerías",
+      title: language === 'es' ? "Frameworks & Librerías" : "Frameworks & Libraries",
       icon: <FaBook />,
       technologies: [
         { name: "React", icon: <FaReact />, level: "advanced" },
@@ -48,7 +60,7 @@ function Skills() {
     },
     {
       id: 3,
-      title: "Herramientas de Desarrollo",
+      title: language === 'es' ? "Herramientas de Desarrollo" : "Development Tools",
       icon: <FaTools />,
       technologies: [
         { name: "Git", icon: <FaGit />, level: "expert" },
@@ -61,7 +73,7 @@ function Skills() {
     },
     {
       id: 4,
-      title: "Bases de Datos & Cloud",
+      title: language === 'es' ? "Bases de Datos & Cloud" : "Databases & Cloud",
       icon: <FaCloud />,
       technologies: [
         { name: "MySQL", icon: <SiMysql />, level: "advanced" },
@@ -75,20 +87,38 @@ function Skills() {
   ];
 
   const devStats = [
-    { icon: <FaLaptopCode />, number: "5+", label: "Lenguajes Dominados" },
-    { icon: <FaRocket />, number: "15+", label: "Proyectos Completados" },
-    { icon: <FaStar />, number: "3+", label: "Años Desarrollando" },
-    { icon: <FaBullseye />, number: "100%", label: "Pasión por el Código" }
+    { 
+      icon: <FaLaptopCode />, 
+      number: "5+", 
+      label: language === 'es' ? "Lenguajes Dominados" : "Languages Mastered" 
+    },
+    { 
+      icon: <FaRocket />, 
+      number: "15+", 
+      label: language === 'es' ? "Proyectos Completados" : "Projects Completed" 
+    },
+    { 
+      icon: <FaStar />, 
+      number: "3+", 
+      label: language === 'es' ? "Años Desarrollando" : "Years Developing" 
+    },
+    { 
+      icon: <FaBullseye />, 
+      number: "100%", 
+      label: language === 'es' ? "Pasión por el Código" : "Passion for Code" 
+    }
   ];
 
   return (
     <section id="habilidades">
       <div className="skills-container">
         <div className="skills-header">
-          <h2>Stack Tecnológico</h2>
+          <h2>{t('skillsTitle')}</h2>
           <p className="skills-description">
-            Desarrollador Full-Stack especializado en Java y Python, con experiencia en tecnologías modernas
-            y metodologías ágiles para crear soluciones robustas y escalables.
+            {language === 'es' 
+              ? "Desarrollador Full-Stack especializado en Java y Python, con experiencia en tecnologías modernas y metodologías ágiles para crear soluciones robustas y escalables."
+              : "Full-Stack Developer specialized in Java and Python, with experience in modern technologies and agile methodologies to create robust and scalable solutions."
+            }
           </p>
         </div>
 
@@ -104,14 +134,12 @@ function Skills() {
                   <div 
                     key={index} 
                     className="tech-item"
-                    title={`${tech.name} - Nivel: ${tech.level}`}
+                    title={`${tech.name} - ${language === 'es' ? 'Nivel' : 'Level'}: ${getSkillLevel(tech.level)}`}
                   >
                     <span className="tech-icon">{tech.icon}</span>
                     <div className="tech-name">{tech.name}</div>
                     <span className={`tech-level level-${tech.level}`}>
-                      {tech.level === 'expert' ? 'Experto' :
-                       tech.level === 'advanced' ? 'Avanzado' :
-                       tech.level === 'intermediate' ? 'Intermedio' : 'Aprendiendo'}
+                      {getSkillLevel(tech.level)}
                     </span>
                   </div>
                 ))}

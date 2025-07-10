@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 import './Header.css';
 
 function Header() {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -42,10 +45,10 @@ function Header() {
   };
 
   const navigationItems = [
-    { label: 'Sobre mí', id: 'sobre-mi' },
-    { label: 'Proyectos', id: 'mis-proyectos' },
-    { label: 'Habilidades', id: 'habilidades' },
-    { label: 'Contacto', id: 'contacto' }
+    { label: t('about'), id: 'sobre-mi' },
+    { label: t('projects'), id: 'mis-proyectos' },
+    { label: t('skills'), id: 'habilidades' },
+    { label: t('contact'), id: 'contacto' }
   ];
 
   return (
@@ -72,6 +75,9 @@ function Header() {
                 </button>
               </li>
             ))}
+            <li className="nav-item">
+              <LanguageSelector />
+            </li>
           </ul>
 
           {/* Mobile Menu Button */}
@@ -115,6 +121,11 @@ function Header() {
                 </button>
               </li>
             ))}
+            <li className="mobile-menu-item">
+              <div className="mobile-language-selector">
+                <LanguageSelector />
+              </div>
+            </li>
           </ul>
         </div>
       </nav>

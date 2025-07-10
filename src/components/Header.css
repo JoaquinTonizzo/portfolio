@@ -347,3 +347,32 @@ body.mobile-menu-open {
 html {
     scroll-behavior: smooth;
 }
+
+/* Mobile Language Selector */
+.mobile-language-selector {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.mobile-language-selector .language-selector {
+    width: 100%;
+    max-width: 200px;
+}
+
+.mobile-language-selector .language-button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: 16px;
+}
+
+.mobile-language-selector .language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+    min-width: 160px;
+}

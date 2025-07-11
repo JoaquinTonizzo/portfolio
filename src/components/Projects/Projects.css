@@ -303,7 +303,7 @@
     align-items: center;
     gap: 0.4rem;
     color: var(--text-secondary);
-    font-size: clamp(0.65rem, 1.2vw, 0.7rem);
+    font-size: clamp(0.65rem, 1.3vh, 0.7rem);
     font-weight: 500;
 }
 

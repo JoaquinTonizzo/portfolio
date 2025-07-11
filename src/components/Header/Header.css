@@ -49,6 +49,11 @@
     font-family: 'Raleway', sans-serif;
 }
 
+/* Asegurar que el logo del header sea blanco */
+.header .logo {
+    color: white;
+}
+
 .logo:hover {
     color: #0066FF;
 }
@@ -79,6 +84,11 @@
     background: none;
     border: none;
     font-family: inherit;
+}
+
+/* Asegurar que los enlaces del header sean blancos */
+.header .nav-link {
+    color: white;
 }
 
 .nav-link:hover {
@@ -222,6 +232,11 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+
+/* Asegurar que los enlaces del menú móvil sean blancos */
+.header .mobile-menu-link {
+    color: white;
 }
 
 .mobile-menu-link::before {

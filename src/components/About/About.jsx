@@ -1,5 +1,5 @@
 import { useLanguage } from '../../contexts/LanguageContext';
-import { FaGraduationCap, FaLaptopCode } from 'react-icons/fa';
+import { FaGraduationCap, FaLaptopCode, FaGlobe } from 'react-icons/fa';
 import './About.css';
 
 function About() {
@@ -9,7 +9,8 @@ function About() {
     // Replace icon placeholders with actual React components
     const textWithIcons = text
       .replace(/<FaGraduationCap \/>/g, '<FaGraduationCap className="section-icon" />')
-      .replace(/<FaLaptopCode \/>/g, '<FaLaptopCode className="section-icon" />');
+      .replace(/<FaLaptopCode \/>/g, '<FaLaptopCode className="section-icon" />')
+      .replace(/<FaGlobe \/>/g, '<FaGlobe className="section-icon" />');
     
     // Split by double newlines to separate sections
     const sections = textWithIcons.split('\n\n');
@@ -20,11 +21,26 @@ function About() {
       const description = lines.slice(1).join('\n');
       
       // Check if first line contains an icon
-      if (firstLine.includes('FaGraduationCap') || firstLine.includes('FaLaptopCode')) {
+      if (firstLine.includes('FaGraduationCap') || firstLine.includes('FaLaptopCode') || firstLine.includes('FaGlobe')) {
         const iconMatch = firstLine.match(/<(Fa\w+) className="section-icon" \/>/);
         const title = firstLine.replace(/<Fa\w+ className="section-icon" \/>/, '').trim();
         
-        const IconComponent = iconMatch ? (iconMatch[1] === 'FaGraduationCap' ? FaGraduationCap : FaLaptopCode) : null;
+        let IconComponent = null;
+        if (iconMatch) {
+          switch (iconMatch[1]) {
+            case 'FaGraduationCap':
+              IconComponent = FaGraduationCap;
+              break;
+            case 'FaLaptopCode':
+              IconComponent = FaLaptopCode;
+              break;
+            case 'FaGlobe':
+              IconComponent = FaGlobe;
+              break;
+            default:
+              IconComponent = null;
+          }
+        }
         
         return (
           <div key={index} className="text-section">
@@ -49,20 +65,6 @@ function About() {
           <h2>{t('aboutTitle')}</h2>
           <div className="about-text">
             {renderAboutText(t('aboutText'))}
-          </div>
-          <div className="about-stats">
-            <div className="stat-item">
-              <span className="stat-number">3+</span>
-              <span className="stat-label">{t('yearsStudying')}</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">10+</span>
-              <span className="stat-label">{t('projects')}</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">2</span>
-              <span className="stat-label">{t('specializations')}</span>
-            </div>
           </div>
         </div>
       </div>

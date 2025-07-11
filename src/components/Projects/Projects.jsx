@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaGamepad, FaBox, FaBullseye, FaExternalLinkAlt, FaRocket, FaCalendarAlt, FaCheckCircle } from 'react-icons/fa';
+import { FaGamepad, FaBox, FaBullseye, FaExternalLinkAlt, FaRocket, FaCalendarAlt, FaCheckCircle, FaMobile, FaGlobe, FaLock } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './Projects.css';
 
@@ -13,24 +13,14 @@ function Projects() {
 
   const getProjectDescription = (projectId) => {
     const descriptions = {
-      1: {
-        es: "Un emocionante juego de aventuras espaciales desarrollado en Java con mecánicas de exploración y combate. Incluye sistema de puntuación, múltiples niveles y efectos visuales.",
-        en: "An exciting space adventure game developed in Java with exploration and combat mechanics. Includes scoring system, multiple levels and visual effects."
-      },
-      2: {
-        es: "Sistema de gestión logística que utiliza principios de programación orientada a objetos. Optimiza rutas, gestiona inventarios y controla entregas en tiempo real.",
-        en: "Logistics management system that uses object-oriented programming principles. Optimizes routes, manages inventories and controls deliveries in real time."
-      },
-      3: {
-        es: "Implementación del popular juego Wordle en Python con interfaz intuitiva. Incluye sistema de pistas, validación de palabras y estadísticas de partidas.",
-        en: "Implementation of the popular Wordle game in Python with intuitive interface. Includes hint system, word validation and game statistics."
-      }
+      1: t('project1Description'),
+      2: t('project2Description'),
+      3: t('project3Description'),
+      4: t('project4Description'),
+      5: t('project5Description'),
+      6: t('project6Description')
     };
-    return descriptions[projectId][language];
-  };
-
-  const getProjectStatus = () => {
-    return language === 'es' ? "Completado" : "Completed";
+    return descriptions[projectId];
   };
 
   const projects = [
@@ -44,7 +34,7 @@ function Projects() {
       tech: ["Java", "Swing", "OOP"],
       type: <FaGamepad />,
       year: "2023",
-      status: getProjectStatus()
+      status: t('projectStatus')
     },
     {
       id: 2,
@@ -56,7 +46,7 @@ function Projects() {
       tech: ["Java", "POO", "MySQL"],
       type: <FaBox />,
       year: "2023",
-      status: getProjectStatus()
+      status: t('projectStatus')
     },
     {
       id: 3,
@@ -68,9 +58,47 @@ function Projects() {
       tech: ["Python", "Tkinter", "Algoritmos"],
       type: <FaBullseye />,
       year: "2024",
-      status: getProjectStatus()
+      status: t('projectStatus')
+    },
+    {
+      id: 4,
+      title: "TaskFlow Mobile",
+      description: getProjectDescription(4),
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
+      link: "https://github.com/JoaquinTonizzo/taskflow-mobile",
+      demo: "#",
+      tech: ["React Native", "Firebase", "Redux"],
+      type: <FaMobile />,
+      year: "2024",
+      status: t('projectStatus')
+    },
+    {
+      id: 5,
+      title: "Corporate Website",
+      description: getProjectDescription(5),
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+      link: "https://github.com/JoaquinTonizzo/corporate-website",
+      demo: "#",
+      tech: ["React", "Node.js", "MongoDB"],
+      type: <FaGlobe />,
+      year: "2024",
+      status: t('projectStatus')
+    },
+    {
+      id: 6,
+      title: "SecureAuth System",
+      description: getProjectDescription(6),
+      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&h=300&fit=crop",
+      link: "https://github.com/JoaquinTonizzo/secure-auth",
+      demo: "#",
+      tech: ["JWT", "Node.js", "PostgreSQL"],
+      type: <FaLock />,
+      year: "2024",
+      status: t('projectStatus')
     }
   ];
+
+
 
   return (
     <section id="mis-proyectos">
@@ -78,10 +106,7 @@ function Projects() {
         <div className="projects-header">
           <h2>{t('projectsTitle')}</h2>
           <p className="projects-subtitle">
-            {language === 'es' 
-              ? "Una selección de proyectos que demuestran mis habilidades en desarrollo de software, desde juegos interactivos hasta sistemas de gestión empresarial."
-              : "A selection of projects that demonstrate my software development skills, from interactive games to business management systems."
-            }
+            {t('projectsSubtitle')}
           </p>
         </div>
 
@@ -111,19 +136,10 @@ function Projects() {
 
                 <div className="project-actions">
                   <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="project-btn btn-primary"
-                  >
-                    <FaExternalLinkAlt />
-                    {t('viewCode')}
-                  </a>
-                  <a 
                     href={project.demo} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="project-btn btn-secondary"
+                    className="project-btn"
                   >
                     <FaRocket />
                     {t('viewProject')}

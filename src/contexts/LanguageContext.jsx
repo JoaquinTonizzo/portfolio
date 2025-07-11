@@ -31,15 +31,20 @@ export const LanguageProvider = ({ children }) => {
       
       // About
       aboutTitle: 'Sobre mí',
-      aboutText: '<FaGraduationCap /> Formación Técnica y Universitaria\nTécnico en Electrónica (Instituto Cardenal Stepinac) y Técnico Universitario en Informática (UNGS), actualmente cursando la Licenciatura en Sistemas.\n\n<FaLaptopCode /> Formación en Desarrollo Full Stack\nEstudiante en Coderhouse: finalicé el módulo de Frontend con React y actualmente curso Backend, profundizando en tecnologías web y buenas prácticas de desarrollo.',
-      yearsStudying: 'Años estudiando',
-      projects: 'Proyectos',
-      specializations: 'Especialidades',
+      aboutText: '<FaGraduationCap /> Formación Técnica y Universitaria\nTécnico en Electrónica (Instituto Cardenal Stepinac) y Técnico Universitario en Informática (UNGS), actualmente cursando la Licenciatura en Sistemas.\n\n<FaLaptopCode /> Formación en Desarrollo Full Stack\nEstudiante en Coderhouse: finalicé el módulo de Frontend con React y actualmente curso Backend, profundizando en tecnologías web y buenas prácticas de desarrollo.\n\n<FaGlobe /> Inglés Upper Intermediate B2\nNivel de inglés Upper Intermediate (B2), certificado por el Instituto Superior Cultural Británico tras 4 años de formación.',
       
       // Projects
       projectsTitle: 'Mis Proyectos',
       viewProject: 'Ver Proyecto',
       viewCode: 'Ver Código',
+      projectsSubtitle: 'Una selección de proyectos que demuestran mis habilidades en desarrollo de software, desde juegos interactivos hasta sistemas de gestión empresarial.',
+      projectStatus: 'Completado',
+      project1Description: 'Un emocionante juego de aventuras espaciales desarrollado en Java con mecánicas de exploración y combate. Incluye sistema de puntuación, múltiples niveles y efectos visuales.',
+      project2Description: 'Sistema de gestión logística que utiliza principios de programación orientada a objetos. Optimiza rutas, gestiona inventarios y controla entregas en tiempo real.',
+      project3Description: 'Implementación del popular juego Wordle en Python con interfaz intuitiva. Incluye sistema de pistas, validación de palabras y estadísticas de partidas.',
+      project4Description: 'Aplicación móvil de gestión de tareas con React Native. Incluye sincronización en la nube, notificaciones push y diseño responsive para iOS y Android.',
+      project5Description: 'Sitio web corporativo moderno desarrollado con React y Node.js. Incluye panel de administración, blog integrado y optimización SEO completa.',
+      project6Description: 'Sistema de autenticación seguro con JWT y encriptación de datos. Incluye gestión de roles, recuperación de contraseñas y auditoría de seguridad.',
       
       // Skills
       skillsTitle: 'Habilidades',
@@ -80,15 +85,20 @@ export const LanguageProvider = ({ children }) => {
       
       // About
       aboutTitle: 'About Me',
-      aboutText: '<FaGraduationCap /> Technical and University Education\nElectronics Technician (Instituto Cardenal Stepinac) and University Computer Technician (UNGS), currently studying Systems Engineering.\n\n<FaLaptopCode /> Full Stack Development Training\nStudent at Coderhouse: completed the Frontend module with React and currently studying Backend, deepening in web technologies and good development practices.',
-      yearsStudying: 'Years studying',
-      projects: 'Projects',
-      specializations: 'Specializations',
+      aboutText: '<FaGraduationCap /> Technical and University Education\nElectronics Technician (Instituto Cardenal Stepinac) and University Computer Technician (UNGS), currently studying Systems Engineering.\n\n<FaLaptopCode /> Full Stack Development Training\nStudent at Coderhouse: completed the Frontend module with React and currently studying Backend, deepening in web technologies and good development practices.\n\n<FaGlobe /> English Upper Intermediate B2\nUpper Intermediate English level (B2), certified by the Instituto Superior Cultural Británico after 4 years of study.',
       
       // Projects
       projectsTitle: 'My Projects',
       viewProject: 'View Project',
       viewCode: 'View Code',
+      projectsSubtitle: 'A selection of projects that demonstrate my software development skills, from interactive games to business management systems.',
+      projectStatus: 'Completed',
+      project1Description: 'An exciting space adventure game developed in Java with exploration and combat mechanics. Includes scoring system, multiple levels and visual effects.',
+      project2Description: 'Logistics management system that uses object-oriented programming principles. Optimizes routes, manages inventories and controls deliveries in real time.',
+      project3Description: 'Implementation of the popular Wordle game in Python with intuitive interface. Includes hint system, word validation and game statistics.',
+      project4Description: 'Mobile task management application with React Native. Includes cloud synchronization, push notifications and responsive design for iOS and Android.',
+      project5Description: 'Modern corporate website developed with React and Node.js. Includes admin panel, integrated blog and complete SEO optimization.',
+      project6Description: 'Secure authentication system with JWT and data encryption. Includes role management, password recovery and security auditing.',
       
       // Skills
       skillsTitle: 'Skills',
@@ -130,15 +140,20 @@ export const LanguageProvider = ({ children }) => {
       
       // About
       aboutTitle: 'Sobre mim',
-      aboutText: '<FaGraduationCap /> Formação Técnica e Universitária\nTécnico em Eletrônica (Instituto Cardenal Stepinac) e Técnico Universitário em Informática (UNGS), atualmente cursando a Licenciatura em Sistemas.\n\n<FaLaptopCode /> Formação em Desenvolvimento Full Stack\nEstudante na Coderhouse: finalizei o módulo de Frontend com React e atualmente curso Backend, aprofundando em tecnologias web e boas práticas de desenvolvimento.',
-      yearsStudying: 'Anos estudando',
-      projects: 'Projetos',
-      specializations: 'Especializações',
+      aboutText: '<FaGraduationCap /> Formação Técnica e Universitária\nTécnico em Eletrônica (Instituto Cardenal Stepinac) e Técnico Universitário em Informática (UNGS), atualmente cursando a Licenciatura em Sistemas.\n\n<FaLaptopCode /> Formação em Desenvolvimento Full Stack\nEstudante na Coderhouse: finalizei o módulo de Frontend com React e atualmente curso Backend, aprofundando em tecnologias web e boas práticas de desenvolvimento.\n\n<FaGlobe /> Inglês Upper Intermediate B2\nNível de inglês Upper Intermediate (B2), certificado pelo Instituto Superior Cultural Britânico após 4 anos de estudo.',
       
       // Projects
       projectsTitle: 'Meus Projetos',
       viewProject: 'Ver Projeto',
       viewCode: 'Ver Código',
+      projectsSubtitle: 'Uma seleção de projetos que demonstram minhas habilidades em desenvolvimento de software, desde jogos interativos até sistemas de gestão empresarial.',
+      projectStatus: 'Concluído',
+      project1Description: 'Um emocionante jogo de aventura espacial desenvolvido em Java com mecânicas de exploração e combate. Inclui sistema de pontuação, múltiplos níveis e efeitos visuais.',
+      project2Description: 'Sistema de gestão logística que utiliza princípios de programação orientada a objetos. Otimiza rotas, gerencia inventários e controla entregas em tempo real.',
+      project3Description: 'Implementação do popular jogo Wordle em Python com interface intuitiva. Inclui sistema de dicas, validação de palavras e estatísticas de partidas.',
+      project4Description: 'Aplicativo móvel de gestão de tarefas com React Native. Inclui sincronização na nuvem, notificações push e design responsivo para iOS e Android.',
+      project5Description: 'Site corporativo moderno desenvolvido com React e Node.js. Inclui painel administrativo, blog integrado e otimização SEO completa.',
+      project6Description: 'Sistema de autenticação seguro com JWT e criptografia de dados. Inclui gestão de funções, recuperação de senhas e auditoria de segurança.',
       
       // Skills
       skillsTitle: 'Habilidades',

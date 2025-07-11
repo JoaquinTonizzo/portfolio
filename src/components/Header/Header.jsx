@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import { BsSunFill, BsMoonFill } from 'react-icons/bs';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTheme } from '../../contexts/ThemeContext';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
@@ -79,16 +79,20 @@ function Header() {
               </li>
             ))}
             <li className="nav-item">
-              <button
-                onClick={toggleTheme}
-                className="theme-toggle"
-                aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-              >
-                {isDarkMode ? <FaSun /> : <FaMoon />}
-              </button>
+              <LanguageSelector />
             </li>
             <li className="nav-item">
-              <LanguageSelector />
+              <button
+                onClick={toggleTheme}
+                className="theme-switch"
+                aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              >
+                <div className={`switch-track ${isDarkMode ? 'dark' : 'light'}`}>
+                  <div className="switch-thumb">
+                    {isDarkMode ? <BsMoonFill /> : <BsSunFill />}
+                  </div>
+                </div>
+              </button>
             </li>
           </ul>
 
@@ -136,10 +140,14 @@ function Header() {
             <li className="mobile-menu-item">
               <button
                 onClick={toggleTheme}
-                className="mobile-theme-toggle"
+                className="mobile-theme-switch"
                 aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
               >
-                {isDarkMode ? <FaSun /> : <FaMoon />}
+                <div className={`switch-track ${isDarkMode ? 'dark' : 'light'}`}>
+                  <div className="switch-thumb">
+                    {isDarkMode ? <BsMoonFill /> : <BsSunFill />}
+                  </div>
+                </div>
                 <span>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</span>
               </button>
             </li>

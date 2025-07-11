@@ -70,7 +70,8 @@ export const LanguageProvider = ({ children }) => {
       // Language selector
       language: 'Idioma',
       spanish: 'Español',
-      english: 'Inglés'
+      english: 'Inglés',
+      portuguese: 'Portugués'
     },
     en: {
       // Header

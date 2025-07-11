@@ -6,18 +6,21 @@ import Skills from './components/Skills/Skills'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import { LanguageProvider } from './contexts/LanguageContext'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 function App() {
   return (
-    <LanguageProvider>
-      <Header />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <Header />
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
+      </LanguageProvider>
+    </ThemeProvider>
   )
 }
 

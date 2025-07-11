@@ -1,11 +1,11 @@
 /* Footer Styles */
 footer {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    color: #1a202c;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
     padding: clamp(2rem, 4vw, 3rem) clamp(0.5rem, 2vw, 1rem);
     position: relative;
     overflow: hidden;
-    border-top: 1px solid rgba(0, 102, 255, 0.1);
+    border-top: 1px solid var(--border-color);
 }
 
 footer::before {

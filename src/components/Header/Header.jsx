@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { useTheme } from '../../contexts/ThemeContext';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import './Header.css';
 
 function Header() {
   const { t } = useLanguage();
+  const { isDarkMode, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -76,6 +79,15 @@ function Header() {
               </li>
             ))}
             <li className="nav-item">
+              <button
+                onClick={toggleTheme}
+                className="theme-toggle"
+                aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              >
+                {isDarkMode ? <FaSun /> : <FaMoon />}
+              </button>
+            </li>
+            <li className="nav-item">
               <LanguageSelector />
             </li>
           </ul>
@@ -121,6 +133,16 @@ function Header() {
                 </button>
               </li>
             ))}
+            <li className="mobile-menu-item">
+              <button
+                onClick={toggleTheme}
+                className="mobile-theme-toggle"
+                aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              >
+                {isDarkMode ? <FaSun /> : <FaMoon />}
+                <span>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</span>
+              </button>
+            </li>
             <li className="mobile-menu-item">
               <div className="mobile-language-selector">
                 <LanguageSelector />

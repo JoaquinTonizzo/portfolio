@@ -3,9 +3,9 @@
     /* Light mode colors */
     --bg-primary: #f8f9fa;
     --bg-secondary: #e9ecef;
-    --text-primary: #1a202c;
-    --text-secondary: #4a5568;
-    --text-muted: #718096;
+    --text-primary: #000000;
+    --text-secondary: #2d3748;
+    --text-muted: #4a5568;
     --border-color: rgba(0, 102, 255, 0.1);
     --card-bg: rgba(255, 255, 255, 0.7);
     --card-border: rgba(255, 255, 255, 0.2);

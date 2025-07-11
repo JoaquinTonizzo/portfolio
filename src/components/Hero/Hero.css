@@ -52,6 +52,7 @@
     gap: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
+    
 }
 
 /* Texto del Hero */
@@ -60,7 +61,8 @@
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    gap: 0.5rem;
+    gap: 1rem;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
 }
 
 .hero-text h1, .hero-text h2 {
@@ -70,44 +72,159 @@
 }
 
 .hero-text h1 {
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-    font-weight: 900;
-    letter-spacing: -0.5px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
     line-height: 1.1;
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
     text-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.1),
-        0 0 20px rgba(0, 102, 255, 0.1);
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(0, 102, 255, 0.4);
     margin-bottom: 0.5rem;
     position: relative;
+    animation: slideInLeft 0.8s ease-out 0.5s both;
 }
 
 .hero-text h1::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -12px;
     left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, #000000, #1a1a1a);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0066FF, #0099FF, #0066FF);
     border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 
+        0 2px 8px rgba(0, 102, 255, 0.4),
+        0 0 20px rgba(0, 102, 255, 0.3);
+    animation: expandWidth 0.8s ease-out 0.8s both, glow 3s ease-in-out infinite 1.5s;
 }
 
 .hero-text h2 {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    font-weight: 500;
-    letter-spacing: 0.2px;
-    line-height: 1.4;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
     color: var(--text-secondary);
-    opacity: 0.9;
+    opacity: 0.95;
     text-shadow: 
-        0 1px 2px rgba(255, 255, 255, 0.8),
-        0 0 10px rgba(255, 255, 255, 0.4);
-    margin-top: 0.5rem;
+        0 2px 4px rgba(0, 0, 0, 0.2),
+        0 0 15px rgba(0, 102, 255, 0.2);
+    margin-top: 0.8rem;
+    position: relative;
+    animation: slideInLeft 0.8s ease-out 0.7s both;
+    padding-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.hero-text h2:hover {
+    color: var(--text-primary);
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(0, 102, 255, 0.3);
+    transform: translateX(5px);
+}
+
+.hero-text h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, #0066FF, #0099FF);
+    border-radius: 2px;
+    animation: expandHeight 0.8s ease-out 1s both;
+}
+
+/* Animaciones para el texto */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80px;
+    }
+}
+
+@keyframes expandHeight {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: 25px;
+        opacity: 1;
+    }
+}
+
+@keyframes expandHeightMobile {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes expandHeightMobileSmall {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: 16px;
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.02);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 
+            0 2px 8px rgba(0, 102, 255, 0.4),
+            0 0 20px rgba(0, 102, 255, 0.3);
+    }
+    50% {
+        box-shadow: 
+            0 2px 8px rgba(0, 102, 255, 0.6),
+            0 0 30px rgba(0, 102, 255, 0.5);
+    }
 }
 
 .hero-content .btn {
@@ -128,6 +245,7 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     position: relative;
     overflow: hidden;
+    animation: slideInLeft 0.8s ease-out 1.1s both;
 }
 
 .hero-content .btn:hover {
@@ -152,6 +270,7 @@
     gap: 12px;
     margin-top: 12px;
     align-items: center;
+    animation: fadeInUp 0.8s ease-out 0.9s both;
 }
 
 /* Botón de LinkedIn */
@@ -176,6 +295,7 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     position: relative;
     overflow: hidden;
+    animation: slideInLeft 0.8s ease-out 1.3s both;
 }
 
 .btn-linkedin:hover {
@@ -199,6 +319,7 @@
 .hero-image {
     flex-shrink: 0;
     position: relative;
+    animation: slideInLeft 0.8s ease-out 0.4s both;
 }
 
 .hero-image img {
@@ -246,11 +367,24 @@
     }
     
     .hero-text h1 {
-        font-size: clamp(1.2rem, 4vw, 1.5rem);
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+    }
+    
+    .hero-text h1::after {
+        width: 60px;
+        height: 3px;
+        bottom: -8px;
     }
     
     .hero-text h2 {
-        font-size: clamp(0.7rem, 2vw, 0.8rem);
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        padding-left: 15px;
+    }
+    
+    .hero-text h2::before {
+        width: 3px;
+        height: 0;
+        animation: expandHeightMobile 0.8s ease-out 1s both;
     }
     
     .hero-buttons {
@@ -272,11 +406,24 @@
     }
     
     .hero-text h1 {
-        font-size: clamp(1rem, 5vw, 1.3rem);
+        font-size: clamp(1.4rem, 5vw, 1.8rem);
+    }
+    
+    .hero-text h1::after {
+        width: 50px;
+        height: 2px;
+        bottom: -6px;
     }
     
     .hero-text h2 {
-        font-size: clamp(0.65rem, 2.5vw, 0.7rem);
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        padding-left: 12px;
+    }
+    
+    .hero-text h2::before {
+        width: 2px;
+        height: 0;
+        animation: expandHeightMobileSmall 0.8s ease-out 1s both;
     }
     
     #hero .btn,

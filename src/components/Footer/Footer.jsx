@@ -1,4 +1,4 @@
-import { FaLinkedin, FaWhatsapp, FaTelegram, FaGithub, FaBolt } from 'react-icons/fa';
+import { FaLinkedin, FaWhatsapp, FaTelegram, FaGithub, FaBolt, FaHeart } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './Footer.css';
 
@@ -9,22 +9,26 @@ function Footer() {
     { 
       name: "LinkedIn", 
       url: "https://www.linkedin.com/in/joaquin-tonizzo/",
-      icon: <FaLinkedin />
+      icon: <FaLinkedin />,
+      color: "#0A66C2"
     },
     { 
       name: "WhatsApp", 
       url: "https://wa.me/5491169702939",
-      icon: <FaWhatsapp />
+      icon: <FaWhatsapp />,
+      color: "#25D366"
     },
     { 
       name: "Telegram", 
       url: "https://t.me/JoaquinTonizzo",
-      icon: <FaTelegram />
+      icon: <FaTelegram />,
+      color: "#0088cc"
     },
     { 
       name: "GitHub", 
       url: "https://github.com/JoaquinTonizzo",
-      icon: <FaGithub />
+      icon: <FaGithub />,
+      color: "#181717"
     }
   ];
 
@@ -42,50 +46,55 @@ function Footer() {
     <footer>
       <div className="footer-container">
         <div className="footer-content">
-          <div className="footer-section">
-            <h3 className="footer-title">Joaquín Tonizzo</h3>
-            <p className="footer-description">
-              {language === 'es'
-                ? "Desarrollador Full Stack apasionado por crear experiencias digitales innovadoras y funcionales. Especializado en tecnologías web modernas y siempre en busca de nuevos desafíos."
-                : "Full Stack Developer passionate about creating innovative and functional digital experiences. Specialized in modern web technologies and always looking for new challenges."
-              }
-            </p>
-          </div>
-
-          <div className="footer-section">
-            <h3 className="footer-title">
-              {language === 'es' ? 'Navegación' : 'Navigation'}
-            </h3>
-            <div className="footer-links">
-              {navigationLinks.map((link, index) => (
-                <a 
-                  key={index} 
-                  href={link.url} 
-                  className="footer-link"
-                >
-                  {link.name}
-                </a>
-              ))}
+          <div className="footer-main">
+            <div className="footer-brand">
+              <h3 className="footer-title">Joaquín Tonizzo</h3>
+              <p className="footer-description">
+                {language === 'es'
+                  ? "Desarrollador Full Stack apasionado por crear experiencias digitales innovadoras y funcionales."
+                  : "Full Stack Developer passionate about creating innovative and functional digital experiences."
+                }
+              </p>
             </div>
-          </div>
 
-          <div className="footer-section">
-            <h3 className="footer-title">
-              {language === 'es' ? 'Conecta Conmigo' : 'Connect With Me'}
-            </h3>
-            <div className="social-links">
-              {socialLinks.map((link, index) => (
-                <a 
-                  key={index} 
-                  href={link.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="social-link"
-                >
-                  <span className="social-icon">{link.icon}</span>
-                  <span>{link.name}</span>
-                </a>
-              ))}
+            <div className="footer-navigation">
+              <h4 className="nav-title">
+                {language === 'es' ? 'Navegación' : 'Navigation'}
+              </h4>
+              <div className="nav-links">
+                {navigationLinks.map((link, index) => (
+                  <a 
+                    key={index} 
+                    href={link.url} 
+                    className="nav-link"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="footer-social">
+              <h4 className="social-title">
+                {language === 'es' ? 'Conecta' : 'Connect'}
+              </h4>
+              <div className="social-grid">
+                {socialLinks.map((link, index) => (
+                  <a 
+                    key={index} 
+                    href={link.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="social-card"
+                    style={{ '--social-color': link.color }}
+                  >
+                    <div className="social-icon">
+                      {link.icon}
+                    </div>
+                    <span className="social-name">{link.name}</span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -93,12 +102,18 @@ function Footer() {
         <div className="footer-divider"></div>
 
         <div className="footer-bottom">
-          <div className="footer-copy">
-            {t('footerText').replace('2024', currentYear)}
+          <div className="footer-copyright">
+            <span>© {currentYear} Joaquín Tonizzo. </span>
+            <span className="copyright-text">
+              {language === 'es' ? 'Todos los derechos reservados.' : 'All rights reserved.'}
+            </span>
           </div>
+          
           <div className="footer-tech">
-            <FaBolt />
-            {language === 'es' ? 'Hecho con React & Vite' : 'Made with React & Vite'}
+            <FaBolt className="tech-icon" />
+            <span className="tech-text">
+              {language === 'es' ? 'Hecho con React & Vite' : 'Made with React & Vite'}
+            </span>
           </div>
         </div>
       </div>

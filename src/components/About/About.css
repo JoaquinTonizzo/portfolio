@@ -69,12 +69,12 @@
     margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
     text-align: left;
     padding: clamp(0.75rem, 2vw, 1rem);
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--card-bg);
     border-radius: 8px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--card-border);
     box-shadow: 
-        0 4px 16px rgba(0, 102, 255, 0.1),
+        0 4px 16px var(--shadow-color),
         0 1px 4px rgba(0, 0, 0, 0.05);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform, box-shadow;
@@ -85,7 +85,8 @@
     box-shadow: 
         0 6px 20px rgba(0, 102, 255, 0.15),
         0 2px 8px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--card-bg);
+    filter: brightness(1.05);
 }
 
 .icon-text {
@@ -112,8 +113,13 @@
 .section-title {
     font-size: clamp(0.9rem, 1.8vw, 1rem);
     font-weight: 700;
-    color: #1a202c;
+    color: var(--text-primary);
     letter-spacing: -0.2px;
+}
+
+/* Asegurar que los títulos sean blancos en dark mode */
+.dark .section-title {
+    color: #ffffff;
 }
 
 .text-section p {
@@ -136,12 +142,12 @@
 .stat-item {
     text-align: center;
     padding: clamp(0.75rem, 2vw, 1rem) clamp(0.4rem, 1vw, 0.5rem);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    background: var(--card-bg);
     border-radius: 8px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--card-border);
     box-shadow: 
-        0 4px 16px rgba(0, 102, 255, 0.1),
+        0 4px 16px var(--shadow-color),
         0 1px 4px rgba(0, 0, 0, 0.05);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -170,6 +176,8 @@
     box-shadow: 
         0 8px 24px rgba(0, 102, 255, 0.2),
         0 2px 8px rgba(0, 0, 0, 0.1);
+    background: var(--card-bg);
+    filter: brightness(1.05);
 }
 
 #sobre-mi .about-stats .stat-item .stat-number {

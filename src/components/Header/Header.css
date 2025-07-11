@@ -1,14 +1,14 @@
 /* CSS Variables for theming */
 :root {
-    /* Light mode colors */
-    --bg-primary: #f8f9fa;
-    --bg-secondary: #e9ecef;
+    /* Light mode colors - Mejor contraste */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
     --text-primary: #000000;
-    --text-secondary: #2d3748;
+    --text-secondary: #1a202c;
     --text-muted: #4a5568;
-    --border-color: rgba(0, 102, 255, 0.1);
-    --card-bg: rgba(255, 255, 255, 0.7);
-    --card-border: rgba(255, 255, 255, 0.2);
+    --border-color: rgba(0, 102, 255, 0.15);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-border: rgba(0, 102, 255, 0.1);
     --shadow-color: rgba(0, 102, 255, 0.1);
     --aurora-primary: #0066FF;
     --aurora-secondary: #0099FF;
@@ -16,16 +16,16 @@
 }
 
 .dark {
-    /* Dark mode colors */
-    --bg-primary: #0f1419;
+    /* Dark mode colors - Mejor contraste */
+    --bg-primary: #0a0a0a;
     --bg-secondary: #1a1a1a;
     --text-primary: #ffffff;
-    --text-secondary: #e2e8f0;
-    --text-muted: #a0aec0;
-    --border-color: rgba(255, 255, 255, 0.1);
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --card-border: rgba(255, 255, 255, 0.1);
-    --shadow-color: rgba(0, 0, 0, 0.3);
+    --text-secondary: #f1f5f9;
+    --text-muted: #cbd5e1;
+    --border-color: rgba(255, 255, 255, 0.15);
+    --card-bg: rgba(255, 255, 255, 0.08);
+    --card-border: rgba(255, 255, 255, 0.15);
+    --shadow-color: rgba(0, 0, 0, 0.4);
     --aurora-primary: #0066FF;
     --aurora-secondary: #0099FF;
     --aurora-tertiary: #0033CC;

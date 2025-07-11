@@ -10,28 +10,28 @@ function Contact() {
       name: "WhatsApp",
       handle: "+54 11 6970-2939",
       url: "https://wa.me/5491169702939",
-      image: "whatsapp.png",
+      image: "/portfolio/whatsapp.png",
       color: "#25D366"
     },
     {
       name: "Telegram",
       handle: "@JoaquinTonizzo",
       url: "https://t.me/JoaquinTonizzo",
-      image: "telegram.png",
+      image: "/portfolio/telegram.png",
       color: "#0088cc"
     },
     {
       name: "GitHub",
       handle: "JoaquinTonizzo",
       url: "https://github.com/JoaquinTonizzo",
-      image: "github.png",
+      image: "/portfolio/github.png",
       color: "#181717"
     },
     {
       name: "LinkedIn",
       handle: "joaquin-tonizzo",
       url: "https://www.linkedin.com/in/joaquin-tonizzo/",
-      image: "linkedin.png",
+      image: "/portfolio/linkedin.png",
       color: "#0A66C2"
     }
   ];

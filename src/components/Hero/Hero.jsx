@@ -24,7 +24,7 @@ function Hero() {
             />
             <div className="hero-content">
                 <div className="hero-image">
-                    <img src="./yo.png" alt="Joaquin Gabriel Tonizzo" />
+                    <img src="/portfolio/yo.png" alt="Joaquin Gabriel Tonizzo" />
                 </div>
                 <div className="hero-text">
                     <h1>Joaquín Gabriel Tonizzo</h1>

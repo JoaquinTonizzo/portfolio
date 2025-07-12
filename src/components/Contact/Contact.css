@@ -335,81 +335,195 @@
         font-size: clamp(0.9rem, 3vw, 1.1rem);
     }
     
-    /* Scroll horizontal para contact cards */
+    /* Diseño innovador para contact cards - Grid responsivo */
     .contact-cards {
-        display: flex;
-        overflow-x: auto;
-        gap: clamp(0.8rem, 2vw, 1rem);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;
         padding: 0.5rem 0;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        margin: 0 -0.5rem;
-        padding: 0.5rem;
+        margin: 0;
     }
 
-    .contact-cards::-webkit-scrollbar {
-        display: none;
-    }
-    
     .contact-card {
-        flex: 0 0 280px;
-        scroll-snap-align: start;
-        padding: 1rem;
+        background: linear-gradient(135deg, var(--bg-card) 0%, rgba(255, 255, 255, 0.05) 100%);
+        border-radius: 16px;
+        padding: 1.2rem;
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 
+            0 8px 32px rgba(0, 102, 255, 0.15),
+            0 2px 8px rgba(0, 0, 0, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
         margin: 0;
-        transition: transform 0.3s ease;
+    }
+
+    .contact-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #0066FF, #0099FF, #00CCFF);
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+    }
+
+    .contact-card:hover::before {
+        transform: scaleX(1);
     }
 
     .contact-card:hover {
-        transform: translateY(-2px);
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 
+            0 16px 48px rgba(0, 102, 255, 0.25),
+            0 4px 16px rgba(0, 0, 0, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
     }
     
     .contact-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #0066FF, #0099FF);
+        box-shadow: 0 6px 20px rgba(0, 102, 255, 0.3);
+        position: relative;
     }
     
-    /* Scroll horizontal para social cards */
+    .contact-icon::after {
+        content: '';
+        position: absolute;
+        inset: 2px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+        pointer-events: none;
+    }
+    
+    .contact-label {
+        font-size: 0.7rem;
+        margin-bottom: 0.3rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+    }
+    
+    .contact-value {
+        font-size: 0.9rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--text-primary), #0066FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    /* Diseño innovador para social cards - Masonry layout */
     .social-grid {
-        display: flex;
-        overflow-x: auto;
-        gap: clamp(0.8rem, 2vw, 1rem);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
         padding: 0.5rem 0;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        margin: 0 -0.5rem;
-        padding: 0.5rem;
+        margin: 0;
     }
 
-    .social-grid::-webkit-scrollbar {
-        display: none;
-    }
-    
     .social-card {
-        flex: 0 0 140px;
-        scroll-snap-align: start;
-        height: 120px;
-        padding: 1rem;
-        margin: 0;
-        transition: transform 0.3s ease;
+        background: linear-gradient(135deg, var(--bg-card) 0%, rgba(255, 255, 255, 0.03) 100%);
+        border-radius: 20px;
+        padding: 1.5rem 1rem;
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 
+            0 8px 32px rgba(0, 102, 255, 0.12),
+            0 2px 8px rgba(0, 0, 0, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        min-height: 140px;
+    }
+
+    .social-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at top right, rgba(0, 102, 255, 0.1), transparent 70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .social-card:hover::before {
+        opacity: 1;
     }
 
     .social-card:hover {
-        transform: translateY(-2px);
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 
+            0 20px 60px rgba(0, 102, 255, 0.2),
+            0 6px 20px rgba(0, 0, 0, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
     }
     
     .social-icon {
-        width: 45px;
-        height: 45px;
+        width: 52px;
+        height: 52px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #ffffff, #f8f9fa);
+        box-shadow: 
+            0 8px 24px rgba(0, 0, 0, 0.12),
+            0 2px 8px rgba(0, 0, 0, 0.08);
+        position: relative;
+        z-index: 2;
+        transition: all 0.3s ease;
+    }
+    
+    .social-icon::after {
+        content: '';
+        position: absolute;
+        inset: 2px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+        pointer-events: none;
     }
     
     .social-icon img {
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .social-info {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .social-name {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.3rem;
+        letter-spacing: 0.3px;
+    }
+    
+    .social-handle {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+        opacity: 0.8;
     }
 }
 
@@ -426,23 +540,59 @@
         font-size: clamp(0.85rem, 3.5vw, 1rem);
     }
     
+    /* Layout más compacto para móviles pequeños */
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
     .contact-card {
-        flex: 0 0 260px;
-        flex-direction: column;
-        text-align: center;
+        padding: 1rem;
+        border-radius: 14px;
+    }
+    
+    .contact-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+    
+    .contact-label {
+        font-size: 0.65rem;
+    }
+    
+    .contact-value {
+        font-size: 0.85rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
     }
     
     .social-card {
-        flex: 0 0 120px;
-        height: auto;
-        flex-direction: row;
-        justify-content: flex-start;
-        text-align: left;
+        padding: 1.2rem 0.8rem;
+        border-radius: 16px;
+        min-height: 120px;
+        gap: 0.8rem;
     }
     
-    .social-info {
-        text-align: left;
+    .social-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .social-icon img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .social-name {
+        font-size: 0.8rem;
+    }
+    
+    .social-handle {
+        font-size: 0.7rem;
     }
 }
 

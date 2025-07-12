@@ -84,6 +84,7 @@
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s ease-out 0.2s;
+    width: 100%;
 }
 
 .projects-grid.animate-in {
@@ -483,22 +484,57 @@
         font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     }
 
+    /* Scroll horizontal para proyectos */
     .projects-grid {
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
         gap: clamp(1rem, 2.5vw, 1.2rem);
+        padding: 0.5rem 0;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        margin: 0 -0.5rem;
+        padding: 0.5rem;
+        justify-content: flex-start;
+    }
+
+    .projects-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .project-card {
-        margin: 0 auto;
-        width: 400px;
+        flex: 0 0 360px;
+        height: 480px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        margin: 0;
+        transition: transform 0.3s ease;
+        width: 360px;
+        min-width: 360px;
+        max-width: 360px;
+    }
+
+    .project-card:hover {
+        transform: translateY(-2px);
     }
 
     .project-actions {
         justify-content: center;
     }
 
+    /* Forzar scroll horizontal */
+    .projects-grid {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+    }
+
     .project-btn {
         width: 100%;
         justify-content: center;
+        padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1.2rem, 2.5vw, 1.4rem);
+        font-size: clamp(0.75rem, 1.4vw, 0.85rem);
     }
 }
 
@@ -512,19 +548,27 @@
     }
 
     .project-content {
-        padding: clamp(0.75rem, 2vw, 1rem);
+        padding: clamp(1rem, 2.5vw, 1.2rem);
     }
 
     .project-image {
-        height: 140px;
+        height: 160px;
     }
 
     .project-title {
-        font-size: clamp(0.9rem, 1.8vw, 1rem);
+        font-size: clamp(1rem, 2vw, 1.1rem);
+        margin-bottom: clamp(0.6rem, 1.5vw, 0.8rem);
     }
 
     .project-description {
-        font-size: clamp(0.7rem, 1.3vw, 0.75rem);
+        font-size: clamp(0.75rem, 1.4vw, 0.8rem);
+        line-height: 1.6;
+        margin-bottom: clamp(0.8rem, 2vw, 1rem);
+    }
+
+    .project-card {
+        flex: 0 0 320px;
+        height: 440px;
     }
 }
 

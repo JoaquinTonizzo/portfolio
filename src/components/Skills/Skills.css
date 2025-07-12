@@ -480,27 +480,85 @@
         font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     }
 
+    /* Scroll horizontal mejorado para skills */
     .skills-grid {
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
         gap: clamp(1rem, 2.5vw, 1.2rem);
+        padding: 0.5rem 0;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        margin: 0 -0.5rem;
+        padding: 0.5rem;
+        justify-content: flex-start;
+    }
+
+    .skills-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .skill-category {
-        width: 240px;
-        height: 340px;
+        flex: 0 0 280px;
+        height: 380px;
         flex-shrink: 0;
+        scroll-snap-align: start;
+        margin: 0;
+        transition: transform 0.3s ease;
+        width: 280px;
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    .skill-category:hover {
+        transform: translateY(-2px);
     }
     
     .tech-grid {
-        max-height: 240px;
+        max-height: 280px;
+    }
+
+    /* Forzar scroll horizontal */
+    .skills-grid {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
     }
 
     .dev-stats {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+    }
+
+    /* Scroll horizontal para stats */
+    .dev-stats {
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
         gap: clamp(0.8rem, 2vw, 1rem);
+        padding: 0.5rem 0;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        margin: 0 -0.5rem;
+        padding: 0.5rem;
+        justify-content: flex-start;
+    }
+
+    .dev-stats::-webkit-scrollbar {
+        display: none;
     }
 
     .stat-card {
-        min-width: 150px;
-        flex: 1;
+        flex: 0 0 180px;
+        scroll-snap-align: start;
+        min-height: 120px;
+        margin: 0;
+        width: 180px;
+        min-width: 180px;
+        max-width: 180px;
     }
 }
 
@@ -525,9 +583,21 @@
         padding: 0.6rem;
     }
 
+    .skill-category {
+        flex: 0 0 260px;
+        height: 360px;
+        width: 260px;
+        min-width: 260px;
+        max-width: 260px;
+    }
+
     .stat-card {
-        min-width: 120px;
+        flex: 0 0 140px;
         padding: clamp(0.75rem, 2vw, 1rem);
+        min-height: 100px;
+        width: 140px;
+        min-width: 140px;
+        max-width: 140px;
     }
 }
 

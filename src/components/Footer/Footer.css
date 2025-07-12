@@ -382,10 +382,34 @@ footer::before {
         align-items: center;
     }
     
+    /* Scroll horizontal para social grid */
     .social-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 200px;
-        margin: 0 auto;
+        display: flex;
+        overflow-x: auto;
+        gap: clamp(0.8rem, 2vw, 1rem);
+        padding: 0.5rem 0;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        max-width: none;
+        margin: 0 -0.5rem;
+        padding: 0.5rem;
+    }
+
+    .social-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .social-card {
+        flex: 0 0 120px;
+        scroll-snap-align: start;
+        margin: 0;
+        transition: transform 0.3s ease;
+    }
+
+    .social-card:hover {
+        transform: translateY(-2px);
     }
     
     .footer-bottom {
@@ -414,6 +438,7 @@ footer::before {
     }
     
     .social-card {
+        flex: 0 0 100px;
         padding: 0.6rem;
     }
     

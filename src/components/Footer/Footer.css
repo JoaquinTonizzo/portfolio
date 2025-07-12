@@ -69,7 +69,7 @@ footer::before {
 
 .footer-description {
     font-size: clamp(0.8rem, 1.5vw, 0.9rem);
-    color: #4a5568;
+    color: var(--text-secondary);
     line-height: 1.6;
     margin: 0;
     max-width: 400px;
@@ -85,7 +85,7 @@ footer::before {
 .nav-title {
     font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 700;
-    color: #1a202c;
+    color: var(--text-primary);
     margin: 0;
     position: relative;
 }
@@ -108,7 +108,7 @@ footer::before {
 }
 
 .nav-link {
-    color: #4a5568;
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: clamp(0.75rem, 1.5vw, 0.85rem);
     font-weight: 500;
@@ -148,7 +148,7 @@ footer::before {
 .social-title {
     font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 700;
-    color: #1a202c;
+    color: var(--text-primary);
     margin: 0;
     position: relative;
 }
@@ -171,11 +171,11 @@ footer::before {
 }
 
 .social-card {
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--bg-card);
     border-radius: 8px;
     padding: 0.8rem;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border-color);
     box-shadow: 
         0 2px 8px rgba(0, 102, 255, 0.1),
         0 1px 3px rgba(0, 0, 0, 0.05);
@@ -211,7 +211,7 @@ footer::before {
     box-shadow: 
         0 4px 16px rgba(0, 102, 255, 0.2),
         0 2px 8px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--bg-card-hover);
 }
 
 .social-icon {
@@ -238,7 +238,7 @@ footer::before {
 .social-name {
     font-size: 0.7rem;
     font-weight: 600;
-    color: #1a202c;
+    color: var(--text-primary);
     position: relative;
     z-index: 2;
 }
@@ -261,14 +261,14 @@ footer::before {
 
 .footer-copyright {
     font-size: clamp(0.75rem, 1.5vw, 0.85rem);
-    color: #4a5568;
+    color: var(--text-secondary);
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem;
 }
 
 .copyright-text {
-    color: #718096;
+    color: var(--text-secondary);
 }
 
 .footer-tech {
@@ -276,12 +276,12 @@ footer::before {
     align-items: center;
     gap: 0.5rem;
     font-size: clamp(0.75rem, 1.5vw, 0.85rem);
-    color: #4a5568;
-    background: rgba(255, 255, 255, 0.7);
+    color: var(--text-secondary);
+    background: var(--bg-card);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border-color);
     box-shadow: 0 2px 8px rgba(0, 102, 255, 0.1);
     transition: all 0.3s ease;
 }
@@ -289,7 +289,7 @@ footer::before {
 .footer-tech:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 102, 255, 0.15);
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--bg-card-hover);
 }
 
 .tech-icon {

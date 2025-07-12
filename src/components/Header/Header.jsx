@@ -6,7 +6,7 @@ import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import './Header.css';
 
 function Header() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { isDarkMode, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -126,6 +126,24 @@ function Header() {
             ×
           </button>
           
+          {/* Top Controls */}
+          <div className="mobile-top-controls">
+            <div className="mobile-language-selector">
+              <LanguageSelector />
+            </div>
+            <button
+              onClick={toggleTheme}
+              className="mobile-theme-switch"
+              aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              <div className={`switch-track ${isDarkMode ? 'dark' : 'light'}`}>
+                <div className="switch-thumb">
+                  {isDarkMode ? <BsMoonFill /> : <BsSunFill />}
+                </div>
+              </div>
+            </button>
+          </div>
+          
           <ul className="mobile-menu-list">
             {navigationItems.map((item) => (
               <li key={item.id} className="mobile-menu-item">
@@ -137,25 +155,6 @@ function Header() {
                 </button>
               </li>
             ))}
-            <li className="mobile-menu-item">
-              <button
-                onClick={toggleTheme}
-                className="mobile-theme-switch"
-                aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-              >
-                <div className={`switch-track ${isDarkMode ? 'dark' : 'light'}`}>
-                  <div className="switch-thumb">
-                    {isDarkMode ? <BsMoonFill /> : <BsSunFill />}
-                  </div>
-                </div>
-                <span>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</span>
-              </button>
-            </li>
-            <li className="mobile-menu-item">
-              <div className="mobile-language-selector">
-                <LanguageSelector />
-              </div>
-            </li>
           </ul>
         </div>
       </nav>

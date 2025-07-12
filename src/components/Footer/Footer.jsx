@@ -1,4 +1,4 @@
-import { FaLinkedin, FaWhatsapp, FaTelegram, FaGithub, FaBolt, FaHeart } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaBolt, FaHeart } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useEffect, useRef } from 'react';
 import './Footer.css';
@@ -33,18 +33,6 @@ function Footer() {
       url: "https://www.linkedin.com/in/joaquin-tonizzo/",
       icon: <FaLinkedin />,
       color: "#0A66C2"
-    },
-    { 
-      name: "WhatsApp", 
-      url: "https://wa.me/5491169702939",
-      icon: <FaWhatsapp />,
-      color: "#25D366"
-    },
-    { 
-      name: "Telegram", 
-      url: "https://t.me/JoaquinTonizzo",
-      icon: <FaTelegram />,
-      color: "#0088cc"
     },
     { 
       name: "GitHub", 

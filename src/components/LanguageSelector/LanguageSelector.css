@@ -101,16 +101,51 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .language-button {
-    padding: 6px 10px;
-    font-size: 13px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .language-button:hover {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
   }
   
   .language-text {
-    display: none;
+    display: block;
+    font-size: 0.8rem;
   }
   
   .language-dropdown {
     min-width: 120px;
+    background: rgba(26, 26, 26, 0.95);
+    border: none;
+    backdrop-filter: blur(20px);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .language-option {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .language-option:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .language-option.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 1);
   }
   
   .language-option .language-text {

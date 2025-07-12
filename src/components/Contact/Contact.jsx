@@ -1,4 +1,4 @@
-import { FaEnvelope, FaMobile, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useEffect, useRef } from 'react';
 import './Contact.css';
@@ -30,20 +30,6 @@ function Contact() {
   
   const socialNetworks = [
     {
-      name: "WhatsApp",
-      handle: "+54 11 6970-2939",
-      url: "https://wa.me/5491169702939",
-      image: "/portfolio/whatsapp.png",
-      color: "#25D366"
-    },
-    {
-      name: "Telegram",
-      handle: "@JoaquinTonizzo",
-      url: "https://t.me/JoaquinTonizzo",
-      image: "/portfolio/telegram.png",
-      color: "#0088cc"
-    },
-    {
       name: "GitHub",
       handle: "JoaquinTonizzo",
       url: "https://github.com/JoaquinTonizzo",
@@ -66,13 +52,6 @@ function Contact() {
       value: "joaquintonizzo1@gmail.com",
       link: "mailto:joaquintonizzo@gmail.com",
       color: "#0066FF"
-    },
-    {
-      icon: <FaMobile />,
-      label: language === 'es' ? 'Teléfono' : 'Phone',
-      value: "+54 11 6970-2939",
-      link: "https://wa.me/5491169702939",
-      color: "#0099FF"
     },
     {
       icon: <FaMapMarkerAlt />,

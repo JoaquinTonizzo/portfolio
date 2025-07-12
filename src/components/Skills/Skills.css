@@ -30,6 +30,14 @@
 .skills-header {
     text-align: center;
     margin-bottom: clamp(2rem, 4vw, 3rem);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.skills-header.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .skills-header h2 {
@@ -77,6 +85,14 @@
     padding: 0.5rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out 0.2s;
+}
+
+.skills-grid.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .skills-grid::-webkit-scrollbar {
@@ -271,6 +287,14 @@
     gap: clamp(1rem, 2.5vw, 1.5rem);
     margin-top: clamp(2rem, 4vw, 3rem);
     justify-content: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out 0.4s;
+}
+
+.dev-stats.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .stat-card {

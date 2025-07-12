@@ -30,6 +30,14 @@
 .contact-header {
     text-align: center;
     margin-bottom: clamp(2rem, 4vw, 3rem);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.contact-header.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contact-header h2 {
@@ -72,6 +80,14 @@
     grid-template-columns: 1fr 1fr;
     gap: clamp(2rem, 4vw, 3rem);
     margin-top: clamp(1.5rem, 3vw, 2rem);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out 0.2s;
+}
+
+.contact-content.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section-header {

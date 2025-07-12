@@ -35,6 +35,14 @@ footer::before {
     grid-template-columns: 2fr 1fr 1fr;
     gap: clamp(2rem, 4vw, 3rem);
     align-items: start;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.footer-main.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer Brand Section */
@@ -257,6 +265,14 @@ footer::before {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out 0.2s;
+}
+
+.footer-bottom.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .footer-copyright {

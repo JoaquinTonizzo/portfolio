@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { 
   FaLaptopCode, FaBook, FaTools, FaCloud, FaRocket, FaBullseye,
   FaJava, FaPython, FaJs, FaHtml5, FaCss3Alt, FaDatabase,
@@ -17,9 +17,32 @@ import './Skills.css';
 function Skills() {
   const { t, language } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
+  const skillsRef = useRef(null);
+  const headerRef = useRef(null);
+  const gridRef = useRef(null);
+  const statsRef = useRef(null);
 
   useEffect(() => {
     setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    if (headerRef.current) observer.observe(headerRef.current);
+    if (gridRef.current) observer.observe(gridRef.current);
+    if (statsRef.current) observer.observe(statsRef.current);
+
+    return () => observer.disconnect();
   }, []);
 
   const getSkillLevel = (level) => {
@@ -124,16 +147,16 @@ function Skills() {
   };
 
   return (
-    <section id="habilidades">
+    <section id="habilidades" ref={skillsRef}>
       <div className="skills-container">
-        <div className="skills-header">
+        <div className="skills-header" ref={headerRef}>
           <h2>{t('skillsTitle')}</h2>
           <p className="skills-description">
             {getSkillsDescription()}
           </p>
         </div>
 
-        <div className={`skills-grid ${isLoaded ? 'loaded' : ''}`}>
+        <div className={`skills-grid ${isLoaded ? 'loaded' : ''}`} ref={gridRef}>
           {skillCategories.map(category => (
             <div key={category.id} className="skill-category">
               <div className="category-header">
@@ -165,7 +188,7 @@ function Skills() {
           ))}
         </div>
 
-        <div className="dev-stats">
+        <div className="dev-stats" ref={statsRef}>
           {devStats.map((stat, index) => (
             <div key={index} className="stat-card">
               <div className="stat-icon-container" style={{ backgroundColor: stat.color }}>

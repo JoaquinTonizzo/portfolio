@@ -30,6 +30,14 @@
 .projects-header {
     text-align: center;
     margin-bottom: clamp(2rem, 4vw, 3rem);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.projects-header.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projects-header h2 {
@@ -73,6 +81,14 @@
     gap: clamp(1rem, 2.5vw, 1.5rem);
     margin-top: clamp(1.5rem, 3vw, 2rem);
     justify-content: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out 0.2s;
+}
+
+.projects-grid.animate-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project-card {

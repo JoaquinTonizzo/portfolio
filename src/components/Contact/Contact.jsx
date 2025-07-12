@@ -1,9 +1,32 @@
 import { FaEnvelope, FaMobile, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { useEffect, useRef } from 'react';
 import './Contact.css';
 
 function Contact() {
   const { t, language } = useLanguage();
+  const contactRef = useRef(null);
+  const headerRef = useRef(null);
+  const infoSectionRef = useRef(null);
+  const socialSectionRef = useRef(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    if (headerRef.current) observer.observe(headerRef.current);
+    if (infoSectionRef.current) observer.observe(infoSectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
   
   const socialNetworks = [
     {
@@ -61,9 +84,9 @@ function Contact() {
   ];
 
   return (
-    <section id="contacto">
+    <section id="contacto" ref={contactRef}>
       <div className="contact-container">
-        <div className="contact-header">
+        <div className="contact-header" ref={headerRef}>
           <h2>{t('contactTitle')}</h2>
           <p className="contact-description">
             {language === 'es' 
@@ -73,7 +96,7 @@ function Contact() {
           </p>
         </div>
 
-        <div className="contact-content">
+        <div className="contact-content" ref={infoSectionRef}>
           <div className="contact-info-section">
             <div className="section-header">
               <h3 className="section-title">

@@ -1,9 +1,31 @@
 import { useLanguage } from '../../contexts/LanguageContext';
 import { FaGraduationCap, FaLaptopCode, FaGlobe } from 'react-icons/fa';
+import { useEffect, useRef } from 'react';
 import './About.css';
 
 function About() {
   const { t } = useLanguage();
+  const aboutRef = useRef(null);
+  const titleRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    if (titleRef.current) observer.observe(titleRef.current);
+    if (textRef.current) observer.observe(textRef.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   const renderAboutText = (text) => {
     // Replace icon placeholders with actual React components
@@ -59,11 +81,11 @@ function About() {
   };
 
   return (
-    <section id="sobre-mi">
+    <section id="sobre-mi" ref={aboutRef}>
       <div className="about-container">
         <div className="about-content">
-          <h2>{t('aboutTitle')}</h2>
-          <div className="about-text">
+          <h2 ref={titleRef}>{t('aboutTitle')}</h2>
+          <div className="about-text" ref={textRef}>
             {renderAboutText(t('aboutText'))}
           </div>
         </div>

@@ -1,9 +1,31 @@
 import { FaLinkedin, FaWhatsapp, FaTelegram, FaGithub, FaBolt, FaHeart } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { useEffect, useRef } from 'react';
 import './Footer.css';
 
 function Footer() {
   const { t, language } = useLanguage();
+  const footerRef = useRef(null);
+  const mainRef = useRef(null);
+  const bottomRef = useRef(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    if (mainRef.current) observer.observe(mainRef.current);
+    if (bottomRef.current) observer.observe(bottomRef.current);
+
+    return () => observer.disconnect();
+  }, []);
   
   const socialLinks = [
     { 
@@ -43,10 +65,10 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer>
+    <footer ref={footerRef}>
       <div className="footer-container">
         <div className="footer-content">
-          <div className="footer-main">
+          <div className="footer-main" ref={mainRef}>
             <div className="footer-brand">
               <h3 className="footer-title">Joaquín Tonizzo</h3>
               <p className="footer-description">
@@ -101,7 +123,7 @@ function Footer() {
 
         <div className="footer-divider"></div>
 
-        <div className="footer-bottom">
+        <div className="footer-bottom" ref={bottomRef}>
           <div className="footer-copyright">
             <span>© {currentYear} Joaquín Tonizzo. </span>
             <span className="copyright-text">

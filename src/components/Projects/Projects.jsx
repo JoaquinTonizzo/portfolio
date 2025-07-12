@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaGamepad, FaBox, FaBullseye, FaExternalLinkAlt, FaRocket, FaCalendarAlt, FaCheckCircle, FaMobile, FaGlobe, FaLock } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './Projects.css';
@@ -6,9 +6,30 @@ import './Projects.css';
 function Projects() {
   const { t, language } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
+  const projectsRef = useRef(null);
+  const headerRef = useRef(null);
+  const gridRef = useRef(null);
 
   useEffect(() => {
     setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    if (headerRef.current) observer.observe(headerRef.current);
+    if (gridRef.current) observer.observe(gridRef.current);
+
+    return () => observer.disconnect();
   }, []);
 
   const getProjectDescription = (projectId) => {
@@ -101,16 +122,16 @@ function Projects() {
 
 
   return (
-    <section id="mis-proyectos">
+    <section id="mis-proyectos" ref={projectsRef}>
       <div className="projects-container">
-        <div className="projects-header">
+        <div className="projects-header" ref={headerRef}>
           <h2>{t('projectsTitle')}</h2>
           <p className="projects-subtitle">
             {t('projectsSubtitle')}
           </p>
         </div>
 
-        <div className={`projects-grid ${isLoaded ? 'loading' : ''}`}>
+        <div className={`projects-grid ${isLoaded ? 'loading' : ''}`} ref={gridRef}>
           {projects.map(project => (
             <div key={project.id} className="project-card">
               <div className="project-image">

@@ -14,9 +14,71 @@ import {
 import { useLanguage } from '../../contexts/LanguageContext';
 import './Skills.css';
 
+// Hook personalizado para contador animado
+const useCounter = (end, duration = 2000, delay = 0, isVisible = false) => {
+  const [count, setCount] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    if (!isVisible || hasAnimated) return;
+
+    let startTime;
+    let animationId;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      // Función de easing suave
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(easeOutQuart * end);
+      
+      setCount(currentCount);
+      
+      if (progress < 1) {
+        animationId = requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+        setIsAnimating(false);
+        setHasAnimated(true);
+      }
+    };
+
+    const startAnimation = () => {
+      setIsAnimating(true);
+      setCount(0);
+      animationId = requestAnimationFrame(animate);
+    };
+
+    const timer = setTimeout(startAnimation, delay);
+
+    return () => {
+      clearTimeout(timer);
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+    };
+  }, [end, duration, delay, isVisible, hasAnimated]);
+
+  return { count, isAnimating };
+};
+
+// Componente de contador animado
+const AnimatedCounter = ({ end, suffix = "", duration = 2000, delay = 0, isVisible = false }) => {
+  const { count, isAnimating } = useCounter(end, duration, delay, isVisible);
+  
+  return (
+    <span className={`stat-number ${isAnimating ? 'counting' : 'completed'}`}>
+      {count}{suffix}
+    </span>
+  );
+};
+
 function Skills() {
   const { t, language } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
+  const [statsVisible, setStatsVisible] = useState(false);
   const skillsRef = useRef(null);
   const headerRef = useRef(null);
   const gridRef = useRef(null);
@@ -31,6 +93,9 @@ function Skills() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-in');
+          if (entry.target === statsRef.current) {
+            setStatsVisible(true);
+          }
         }
       });
     }, {
@@ -116,24 +181,32 @@ function Skills() {
 
   const devStats = [
     { 
-      number: "6+", 
+      number: 6, 
+      suffix: "+",
       label: language === 'es' ? "Lenguajes Dominados" : language === 'en' ? "Languages Mastered" : "Linguagens Dominadas",
-      color: "#FF6B6B"
+      color: "#FF6B6B",
+      delay: 0
     },
     { 
-      number: "15+", 
+      number: 15, 
+      suffix: "+",
       label: language === 'es' ? "Proyectos Completados" : language === 'en' ? "Projects Completed" : "Projetos Concluídos",
-      color: "#4ECDC4"
+      color: "#4ECDC4",
+      delay: 200
     },
     { 
-      number: "3+", 
+      number: 3, 
+      suffix: "+",
       label: language === 'es' ? "Años Desarrollando" : language === 'en' ? "Years Developing" : "Anos Desenvolvendo",
-      color: "#45B7D1"
+      color: "#45B7D1",
+      delay: 400
     },
     { 
-      number: "100%", 
+      number: 100, 
+      suffix: "%",
       label: language === 'es' ? "Pasión por el Código" : language === 'en' ? "Passion for Code" : "Paixão pelo Código",
-      color: "#96CEB4"
+      color: "#96CEB4",
+      delay: 600
     }
   ];
 
@@ -194,7 +267,13 @@ function Skills() {
               <div className="stat-icon-container" style={{ backgroundColor: stat.color }}>
                 <span className="stat-icon">{stat.icon}</span>
               </div>
-              <span className="stat-number">{stat.number}</span>
+              <AnimatedCounter 
+                end={stat.number} 
+                suffix={stat.suffix}
+                duration={2500}
+                delay={stat.delay}
+                isVisible={statsVisible}
+              />
               <span className="stat-label">{stat.label}</span>
             </div>
           ))}

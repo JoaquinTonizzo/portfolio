@@ -15,7 +15,9 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import './Skills.css';
 
 // Hook personalizado para contador animado
-const useCounter = (end, duration = 2000, delay = 0, isVisible = false) => {
+const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+const useCounter = (end, duration = 1200, delay = 0, isVisible = false) => {
   const [count, setCount] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -29,8 +31,9 @@ const useCounter = (end, duration = 2000, delay = 0, isVisible = false) => {
     const animate = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
-      // Interpolación lineal para animación más constante
-      const currentCount = Math.floor(progress * end);
+      // Usar easing para animación más natural
+      const easedProgress = easeOutCubic(progress);
+      const currentCount = Math.floor(easedProgress * end);
       setCount(currentCount);
       if (progress < 1) {
         animationId = requestAnimationFrame(animate);
@@ -61,7 +64,7 @@ const useCounter = (end, duration = 2000, delay = 0, isVisible = false) => {
 };
 
 // Componente de contador animado
-const AnimatedCounter = ({ end, suffix = "", duration = 2000, delay = 0, isVisible = false }) => {
+const AnimatedCounter = ({ end, suffix = "", duration = 1200, delay = 0, isVisible = false }) => {
   const { count, isAnimating } = useCounter(end, duration, delay, isVisible);
   
   return (
@@ -266,7 +269,7 @@ function Skills() {
               <AnimatedCounter 
                 end={stat.number} 
                 suffix={stat.suffix}
-                duration={2500}
+                duration={1200}
                 delay={stat.delay}
                 isVisible={statsVisible}
               />

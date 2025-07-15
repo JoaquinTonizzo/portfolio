@@ -29,13 +29,9 @@ const useCounter = (end, duration = 2000, delay = 0, isVisible = false) => {
     const animate = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
-      
-      // Función de easing suave
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(easeOutQuart * end);
-      
+      // Interpolación lineal para animación más constante
+      const currentCount = Math.floor(progress * end);
       setCount(currentCount);
-      
       if (progress < 1) {
         animationId = requestAnimationFrame(animate);
       } else {

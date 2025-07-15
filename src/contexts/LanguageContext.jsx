@@ -31,6 +31,7 @@ export const LanguageProvider = ({ children }) => {
       
       // About
       aboutTitle: 'Sobre mí',
+      aboutSubtitle: 'Conoce un poco más sobre mi formación, experiencia y habilidades que me definen como profesional.',
       aboutText: '<FaGraduationCap /> Formación Técnica y Universitaria\nTécnico en Electrónica (Instituto Cardenal Stepinac) y Técnico Universitario en Informática (UNGS), actualmente cursando la Licenciatura en Sistemas.\n\n<FaLaptopCode /> Formación en Desarrollo Full Stack\nEstudiante en Coderhouse: finalicé el módulo de Frontend con React y actualmente curso Backend, profundizando en tecnologías web y buenas prácticas de desarrollo.\n\n<FaGlobe /> Inglés Upper Intermediate B2\nNivel de inglés Upper Intermediate (B2), certificado por el Instituto Superior Cultural Británico tras 4 años de formación.',
       
       // Projects
@@ -86,6 +87,7 @@ export const LanguageProvider = ({ children }) => {
       
       // About
       aboutTitle: 'About Me',
+      aboutSubtitle: 'Learn more about my background, experience, and the skills that define me as a professional.',
       aboutText: '<FaGraduationCap /> Technical and University Education\nElectronics Technician (Instituto Cardenal Stepinac) and University Computer Technician (UNGS), currently studying Systems Engineering.\n\n<FaLaptopCode /> Full Stack Development Training\nStudent at Coderhouse: completed the Frontend module with React and currently studying Backend, deepening in web technologies and good development practices.\n\n<FaGlobe /> English Upper Intermediate B2\nUpper Intermediate English level (B2), certified by the Instituto Superior Cultural Británico after 4 years of study.',
       
       // Projects
@@ -141,6 +143,7 @@ export const LanguageProvider = ({ children }) => {
       
       // About
       aboutTitle: 'Sobre mim',
+      aboutSubtitle: 'Conheça um pouco mais sobre minha formação, experiência e habilidades que me definem como profissional.',
       aboutText: '<FaGraduationCap /> Formação Técnica e Universitária\nTécnico em Eletrônica (Instituto Cardenal Stepinac) e Técnico Universitário em Informática (UNGS), atualmente cursando a Licenciatura em Sistemas.\n\n<FaLaptopCode /> Formação em Desenvolvimento Full Stack\nEstudante na Coderhouse: finalizei o módulo de Frontend com React e atualmente curso Backend, aprofundando em tecnologias web e boas práticas de desenvolvimento.\n\n<FaGlobe /> Inglês Upper Intermediate B2\nNível de inglês Upper Intermediate (B2), certificado pelo Instituto Superior Cultural Britânico após 4 anos de estudo.',
       
       // Projects

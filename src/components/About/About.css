@@ -220,6 +220,25 @@
     letter-spacing: 0.2px;
 }
 
+.about-subtitle {
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    color: var(--text-secondary);
+    margin-top: clamp(0.75rem, 2vw, 1rem);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.about-subtitle.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .about-container {

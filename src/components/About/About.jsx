@@ -7,6 +7,7 @@ function About() {
   const { t } = useLanguage();
   const aboutRef = useRef(null);
   const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -22,6 +23,7 @@ function About() {
     });
 
     if (titleRef.current) observer.observe(titleRef.current);
+    if (subtitleRef.current) observer.observe(subtitleRef.current);
     if (textRef.current) observer.observe(textRef.current);
 
     return () => observer.disconnect();
@@ -85,6 +87,7 @@ function About() {
       <div className="about-container">
         <div className="about-content">
           <h2 ref={titleRef}>{t('aboutTitle')}</h2>
+          <p className="about-subtitle" ref={subtitleRef}>{t('aboutSubtitle')}</p>
           <div className="about-text" ref={textRef}>
             {renderAboutText(t('aboutText'))}
           </div>

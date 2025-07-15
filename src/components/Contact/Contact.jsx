@@ -49,8 +49,8 @@ function Contact() {
     {
       icon: <FaEnvelope />,
       label: language === 'es' ? 'Email' : 'Email',
-      value: "joaquintonizzo1@gmail.com",
-      link: "mailto:joaquintonizzo@gmail.com",
+      value: "Joaquintonizzo1@gmail.com",
+      link: "mailto:Joaquintonizzo1@gmail.com",
       color: "#0066FF"
     }
   ];
@@ -111,12 +111,12 @@ function Contact() {
           <div className="social-networks-section">
             <div className="section-header">
               <h3 className="section-title">
-                {language === 'es' ? 'Redes Sociales' : 'Social Networks'}
+                {language === 'es' ? 'Perfiles Profesionales' : 'Professional Profiles'}
               </h3>
               <p className="section-subtitle">
                 {language === 'es' 
-                  ? 'Sígueme y conectemos en las redes'
-                  : 'Follow me and connect on social networks'
+                  ? 'Conecta conmigo a través de mis perfiles profesionales'
+                  : 'Connect with me through my professional profiles'
                 }
               </p>
             </div>

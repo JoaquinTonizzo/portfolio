@@ -50,7 +50,7 @@ function Contact() {
       icon: <FaEnvelope />,
       label: language === 'es' ? 'Email' : 'Email',
       value: "Joaquintonizzo1@gmail.com",
-      link: "mailto:Joaquintonizzo1@gmail.com",
+      link: "mailto:joaquintonizzo1@gmail.com",
       color: "#0066FF"
     }
   ];

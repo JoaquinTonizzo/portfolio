@@ -30,18 +30,18 @@ function Contact() {
   
   const socialNetworks = [
     {
-      name: "GitHub",
-      handle: "JoaquinTonizzo",
-      url: "https://github.com/JoaquinTonizzo",
-      image: "/portfolio/github.png",
-      color: "#181717"
-    },
-    {
       name: "LinkedIn",
       handle: "joaquin-tonizzo",
       url: "https://www.linkedin.com/in/joaquin-tonizzo/",
       image: "/portfolio/linkedin.png",
       color: "#0A66C2"
+    },
+    {
+      name: "GitHub",
+      handle: "JoaquinTonizzo",
+      url: "https://github.com/JoaquinTonizzo",
+      image: "/portfolio/github.png",
+      color: "#181717"
     }
   ];
 

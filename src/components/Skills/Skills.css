@@ -590,6 +590,9 @@
         min-width: 180px;
         max-width: 180px;
     }
+    .dev-stats {
+        margin-top: 2.5rem !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -628,6 +631,9 @@
         width: 140px;
         min-width: 140px;
         max-width: 140px;
+    }
+    .dev-stats {
+        margin-top: 2.8rem !important;
     }
 }
 

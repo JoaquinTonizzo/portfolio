@@ -9,7 +9,7 @@ import {
 import { 
   SiMysql, SiPostgresql, SiMongodb, SiJquery,
   SiSpring, SiEclipseide, SiTypescript, SiTailwindcss,
-  SiFirebase, SiDocker, SiVuedotjs, SiFlask, SiGitlab, SiVercel, SiNetlify, SiCplusplus, SiNextdotjs
+  SiFirebase, SiDocker, SiVuedotjs, SiFlask, SiGitlab, SiVercel, SiNetlify, SiCplusplus, SiNextdotjs, SiGo
 } from 'react-icons/si';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './Skills.css';
@@ -129,6 +129,7 @@ function Skills() {
         { name: "C++", icon: <SiCplusplus style={{ color: "#00599C" }} />, level: "intermediate", color: "#00599C" }, // Agregado C++
         { name: "Java", icon: <FaJava style={{ color: "#E76F00" }} />, level: "expert", color: "#E76F00" },
         { name: "Python", icon: <FaPython style={{ color: "#3776AB" }} />, level: "expert", color: "#3776AB" },
+        { name: "Go", icon: <SiGo style={{ color: "#00ADD8" }} />, level: "learning", color: "#00ADD8" }, // Agregado Go
         { name: "JavaScript", icon: <FaJs style={{ color: "#F7DF1E" }} />, level: "advanced", color: "#F7DF1E" },
         { name: "TypeScript", icon: <SiTypescript style={{ color: "#3178C6" }} />, level: "intermediate", color: "#3178C6" },
         { name: "HTML", icon: <FaHtml5 style={{ color: "#E34F26" }} />, level: "expert", color: "#E34F26" },
@@ -182,7 +183,7 @@ function Skills() {
 
   const devStats = [
     { 
-      number: 6, 
+      number: 7, 
       suffix: "+",
       label: language === 'es' ? "Lenguajes Dominados" : language === 'en' ? "Languages Mastered" : "Linguagens Dominadas",
       color: "#FF6B6B",

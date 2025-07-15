@@ -411,7 +411,12 @@
     }
     
     .hero-text h2::before {
-        display: none;
+        left: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 0;
+        animation: expandHeightMobile 0.8s ease-out 1s both;
     }
     
     .hero-buttons {
@@ -454,7 +459,12 @@
     }
     
     .hero-text h2::before {
-        display: none;
+        left: -6px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2px;
+        height: 0;
+        animation: expandHeightMobileSmall 0.8s ease-out 1s both;
     }
     
     .hero-buttons {

@@ -361,6 +361,53 @@
         0 0 0 8px rgba(0, 102, 255, 0.2);
 }
 
+.btn-github {
+  background: #181717;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  border: none;
+  padding: 10px 24px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(24,23,23,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-github:hover {
+  background: #333;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(24,23,23,0.22), 0 2px 8px rgba(0,0,0,0.13);
+}
+
+.btn-github:active {
+  background: #222;
+  color: #fff;
+}
+
+.hero-content .btn,
+.btn-linkedin,
+.btn-github {
+  transition: background 0.2s, color 0.2s, box-shadow 0.25s, transform 0.22s cubic-bezier(0.4,0,0.2,1);
+}
+
+.hero-content .btn:hover,
+.btn-linkedin:hover,
+.btn-github:hover {
+  transform: translateY(-1.5px) scale(1.015);
+  box-shadow: 0 4px 12px rgba(0,102,255,0.10), 0 1px 4px rgba(0,0,0,0.08);
+  filter: brightness(1.03);
+}
+
+.hero-content .btn:active,
+.btn-linkedin:active,
+.btn-github:active {
+  transform: translateY(0) scale(0.98);
+  filter: brightness(0.98);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #hero {

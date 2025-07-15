@@ -1,5 +1,5 @@
 import { useLanguage } from '../../contexts/LanguageContext';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { useEffect, useRef } from 'react';
 import Aurora from '../Aurora/Aurora';
 import './Hero.css';
@@ -38,6 +38,10 @@ function Hero() {
         window.open('https://www.linkedin.com/in/joaquin-tonizzo/', '_blank');
     }
 
+    const abrirGitHub = () => {
+        window.open('https://github.com/JoaquinTonizzo', '_blank');
+    }
+
     return (
         <section id="hero" ref={heroRef}>
             <Aurora
@@ -60,6 +64,10 @@ function Hero() {
                         <button className="btn btn-linkedin" onClick={abrirLinkedIn}>
                             <FaLinkedin />
                             LinkedIn
+                        </button>
+                        <button className="btn btn-github" onClick={abrirGitHub}>
+                            <FaGithub />
+                            GitHub
                         </button>
                     </div>
                 </div>

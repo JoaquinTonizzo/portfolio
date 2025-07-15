@@ -81,27 +81,21 @@
     transform: translateY(0);
 }
 
+/* Eliminar fondo y animación hover de las cards */
 .text-section {
     margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
     text-align: left;
     padding: clamp(0.75rem, 2vw, 1rem);
-    background: var(--card-bg);
     border-radius: 8px;
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--card-border);
-    box-shadow: 
-        0 4px 16px var(--shadow-color),
-        0 1px 4px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform, box-shadow;
 }
 
 .text-section:hover {
-    transform: translateY(-1px);
-    box-shadow: 
-        0 4px 12px rgba(0, 102, 255, 0.1),
-        0 2px 6px rgba(0, 0, 0, 0.08);
-    border-color: rgba(0, 102, 255, 0.2);
+}
+
+.text-section:hover .section-icon {
+}
+
+.text-section:hover .section-title {
 }
 
 .icon-text {
@@ -161,44 +155,20 @@
     margin-top: clamp(0.75rem, 2vw, 1rem);
 }
 
+/* Para stat-item (si también se consideran cards) */
 .stat-item {
     text-align: center;
     padding: clamp(0.75rem, 2vw, 1rem) clamp(0.4rem, 1vw, 0.5rem);
-    background: var(--card-bg);
     border-radius: 8px;
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--card-border);
-    box-shadow: 
-        0 4px 16px var(--shadow-color),
-        0 1px 4px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    will-change: transform, box-shadow;
 }
 
-.stat-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    transition: left 0.5s ease;
-    pointer-events: none;
-}
-
+.stat-item::before,
 .stat-item:hover::before {
-    left: 100%;
 }
 
 .stat-item:hover {
-    transform: translateY(-1px);
-    box-shadow: 
-        0 4px 12px rgba(0, 102, 255, 0.1),
-        0 2px 6px rgba(0, 0, 0, 0.08);
-    border-color: rgba(0, 102, 255, 0.2);
 }
 
 #sobre-mi .about-stats .stat-item .stat-number {

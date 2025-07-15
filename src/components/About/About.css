@@ -21,7 +21,7 @@
 }
 
 .about-container {
-    max-width: min(800px, 90vw);
+    max-width: min(1200px, 98vw);
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -33,7 +33,7 @@
 
 .about-content {
     flex: 1;
-    max-width: 500px;
+    max-width: 900px;
     text-align: center;
 }
 
@@ -87,6 +87,11 @@
     text-align: left;
     padding: clamp(0.75rem, 2vw, 1rem);
     border-radius: 8px;
+    max-width: 600px;
+    min-width: 320px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-section:hover {
@@ -194,9 +199,10 @@
     font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     color: var(--text-secondary);
     margin-top: clamp(0.75rem, 2vw, 1rem);
-    max-width: 600px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    display: block;
     line-height: 1.6;
     font-weight: 400;
     opacity: 0;
@@ -207,6 +213,54 @@
 .about-subtitle.animate-in {
     opacity: 1;
     transform: translateY(0);
+}
+
+.wide-section {
+  max-width: 640px;
+}
+
+.wide-section .icon-text {
+  position: relative;
+  padding-left: 28px;
+}
+
+.about-vertical-line {
+  position: absolute;
+  left: -12px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, #0066FF, #0099FF);
+  border-radius: 2px;
+  margin-left: 0;
+  z-index: 2;
+  animation: aboutLineGrow 1s cubic-bezier(0.4,0,0.2,1) 0.5s both;
+}
+
+.wide-section .icon-text {
+  padding-left: 0;
+}
+
+@keyframes aboutLineGrow {
+  from { height: 0; opacity: 0; }
+  to { height: 100%; opacity: 1; }
+}
+
+/* Quitar la línea individual de las cards anchas */
+.wide-section .icon-text::before {
+  display: none !important;
+}
+
+@keyframes expandHeight {
+  from { height: 0; opacity: 0; }
+  to { height: 38px; opacity: 1; }
+}
+
+@media (max-width: 900px) {
+  .wide-section {
+    max-width: 96vw;
+  }
 }
 
 /* Responsive Design */
@@ -234,14 +288,14 @@
 
     /* Scroll horizontal para las cards de texto */
     .about-text {
-        display: flex;
-        overflow-x: auto;
-        gap: clamp(0.75rem, 2vw, 1rem);
-        padding: 0.5rem 0 1rem 0;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
-        -ms-overflow-style: auto;
+        display: block;
+        overflow-x: unset;
+        gap: unset;
+        padding: 0;
+        scroll-snap-type: none;
+        -webkit-overflow-scrolling: unset;
+        scrollbar-width: unset;
+        -ms-overflow-style: unset;
     }
 
     .about-text::-webkit-scrollbar {
@@ -264,15 +318,12 @@
     }
 
     .text-section {
-        flex: 0 0 320px;
-        scroll-snap-align: start;
-        text-align: left;
-        padding: clamp(1rem, 2.5vw, 1.2rem);
-        margin-bottom: 0;
-        min-height: 240px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        flex: unset;
+        max-width: 98vw;
+        margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+        min-height: unset;
+        display: block;
+        padding: clamp(0.75rem, 2vw, 1rem);
     }
 
     .icon-text {
@@ -323,6 +374,20 @@
         scroll-snap-align: start;
         min-height: 120px;
     }
+
+    .about-vertical-line {
+      left: -4px;
+      width: 2px;
+      border-radius: 1px;
+      height: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+  .text-section {
+    max-width: 98vw;
+    min-width: unset;
+  }
 }
 
 @media (max-width: 480px) {

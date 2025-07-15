@@ -65,9 +65,12 @@ function About() {
               IconComponent = null;
           }
         }
-        
+
+        // Detectar si es Formación o Inglés
+        const isWide = title.toLowerCase().includes('formación') || title.toLowerCase().includes('education') || title.toLowerCase().includes('inglés') || title.toLowerCase().includes('english');
+
         return (
-          <div key={index} className="text-section">
+          <div key={index} className={`text-section${isWide ? ' wide-section' : ''}`}>
             <div className="icon-text">
               {IconComponent && <IconComponent className="section-icon" />}
               <span className="section-title">{title}</span>
@@ -88,8 +91,12 @@ function About() {
         <div className="about-content">
           <h2 ref={titleRef}>{t('aboutTitle')}</h2>
           <p className="about-subtitle" ref={subtitleRef}>{t('aboutSubtitle')}</p>
-          <div className="about-text" ref={textRef}>
-            {renderAboutText(t('aboutText'))}
+          <div style={{position: 'relative', display: 'flex', justifyContent: 'center'}}>
+            {/* Línea vertical animada para los 3 apartados */}
+            <div className="about-vertical-line" />
+            <div className="about-text" ref={textRef} style={{width: '100%'}}>
+              {renderAboutText(t('aboutText'))}
+            </div>
           </div>
         </div>
       </div>

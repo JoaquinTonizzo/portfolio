@@ -479,6 +479,11 @@
         font-size: 0.8rem;
         min-width: 120px;
     }
+
+    .hero-text h2::before {
+        display: none !important;
+        content: none !important;
+    }
 }
 
 @media (max-width: 480px) {

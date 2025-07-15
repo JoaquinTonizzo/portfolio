@@ -117,14 +117,6 @@ function Header() {
             }
           }}
         >
-          {/* Close Button */}
-          <button 
-            className="mobile-menu-close"
-            onClick={toggleMobileMenu}
-            aria-label="Cerrar menú"
-          >
-            ×
-          </button>
           
           {/* Top Controls */}
           <div className="mobile-top-controls">

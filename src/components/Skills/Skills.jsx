@@ -9,7 +9,7 @@ import {
 import { 
   SiMysql, SiPostgresql, SiMongodb, SiJquery,
   SiSpring, SiEclipseide, SiTypescript, SiTailwindcss,
-  SiFirebase, SiDocker, SiVuedotjs
+  SiFirebase, SiDocker, SiVuedotjs, SiFlask, SiGitlab, SiVercel, SiNetlify, SiCplusplus, SiNextdotjs
 } from 'react-icons/si';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './Skills.css';
@@ -126,6 +126,7 @@ function Skills() {
       icon: <FaCode />,
       color: "#FF6B6B",
       technologies: [
+        { name: "C++", icon: <SiCplusplus style={{ color: "#00599C" }} />, level: "intermediate", color: "#00599C" }, // Agregado C++
         { name: "Java", icon: <FaJava style={{ color: "#E76F00" }} />, level: "expert", color: "#E76F00" },
         { name: "Python", icon: <FaPython style={{ color: "#3776AB" }} />, level: "expert", color: "#3776AB" },
         { name: "JavaScript", icon: <FaJs style={{ color: "#F7DF1E" }} />, level: "advanced", color: "#F7DF1E" },
@@ -137,13 +138,13 @@ function Skills() {
     {
       id: 2,
       title: language === 'es' ? "Frameworks & Librerías" : language === 'en' ? "Frameworks & Libraries" : "Frameworks & Bibliotecas",
-      icon: <FaRocket />,
+      icon: <FaRocket />, 
       color: "#4ECDC4",
       technologies: [
         { name: "React", icon: <FaReact style={{ color: "#61DAFB" }} />, level: "advanced", color: "#61DAFB" },
-        { name: "Vue.js", icon: <SiVuedotjs style={{ color: "#4FC08D" }} />, level: "intermediate", color: "#4FC08D" },
-        { name: "Spring", icon: <SiSpring style={{ color: "#6DB33F" }} />, level: "intermediate", color: "#6DB33F" },
-        { name: "Node.js", icon: <FaNodeJs style={{ color: "#339933" }} />, level: "intermediate", color: "#339933" },
+        { name: "Flask", icon: <SiFlask style={{ color: "#000000" }} />, level: "intermediate", color: "#000000" },
+        { name: "Node.js", icon: <FaNodeJs style={{ color: "#339933" }} />, level: "learning", color: "#339933" }, // Node.js como aprendiendo
+        { name: "Next.js", icon: <SiNextdotjs style={{ color: "#000000" }} />, level: "learning", color: "#000000" }, // Next.js como aprendiendo
         { name: "Bootstrap", icon: <FaBootstrap style={{ color: "#7952B3" }} />, level: "advanced", color: "#7952B3" },
         { name: "Tailwind", icon: <SiTailwindcss style={{ color: "#06B6D4" }} />, level: "intermediate", color: "#06B6D4" }
       ]
@@ -151,11 +152,12 @@ function Skills() {
     {
       id: 3,
       title: language === 'es' ? "Herramientas de Desarrollo" : language === 'en' ? "Development Tools" : "Ferramentas de Desenvolvimento",
-      icon: <FaTools />,
+      icon: <FaTools />, 
       color: "#45B7D1",
       technologies: [
         { name: "Git", icon: <FaGit style={{ color: "#F05032" }} />, level: "expert", color: "#F05032" },
         { name: "GitHub", icon: <FaGithub style={{ color: "#181717" }} />, level: "expert", color: "#181717" },
+        { name: "GitLab", icon: <SiGitlab style={{ color: "#FC6D26" }} />, level: "advanced", color: "#FC6D26" },
         { name: "VS Code", icon: <FaLaptopCode style={{ color: "#007ACC" }} />, level: "expert", color: "#007ACC" },
         { name: "IntelliJ", icon: <FaJava style={{ color: "#000000" }} />, level: "advanced", color: "#000000" },
         { name: "Eclipse", icon: <SiEclipseide style={{ color: "#2C2255" }} />, level: "advanced", color: "#2C2255" },
@@ -165,15 +167,15 @@ function Skills() {
     {
       id: 4,
       title: language === 'es' ? "Bases de Datos & Cloud" : language === 'en' ? "Databases & Cloud" : "Bancos de Dados & Cloud",
-      icon: <FaServer />,
+      icon: <FaServer />, 
       color: "#96CEB4",
       technologies: [
         { name: "MySQL", icon: <SiMysql style={{ color: "#4479A1" }} />, level: "advanced", color: "#4479A1" },
         { name: "PostgreSQL", icon: <SiPostgresql style={{ color: "#336791" }} />, level: "intermediate", color: "#336791" },
         { name: "MongoDB", icon: <SiMongodb style={{ color: "#47A248" }} />, level: "learning", color: "#47A248" },
         { name: "Firebase", icon: <SiFirebase style={{ color: "#FFCA28" }} />, level: "intermediate", color: "#FFCA28" },
-        { name: "AWS", icon: <FaCloud style={{ color: "#FF9900" }} />, level: "learning", color: "#FF9900" },
-        { name: "SQLite", icon: <FaDatabase style={{ color: "#003B57" }} />, level: "advanced", color: "#003B57" }
+        { name: "Vercel", icon: <SiVercel style={{ color: "#000000" }} />, level: "learning", color: "#000000" }, // Agregado Vercel
+        { name: "Netlify", icon: <SiNetlify style={{ color: "#00C7B7" }} />, level: "learning", color: "#00C7B7" } // Agregado Netlify
       ]
     }
   ];

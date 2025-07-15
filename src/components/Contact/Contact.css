@@ -209,7 +209,10 @@
 }
 
 .contact-value:hover {
-    color: #0066FF;
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+    transition: none !important;
+    cursor: pointer;
 }
 
 /* Social Networks Section */
@@ -257,7 +260,7 @@
 }
 
 .social-card:hover {
-    transform: translateY(-3px) scale(1.02);
+    transform: translateY(-2px);
     box-shadow: 
         0 8px 24px rgba(0, 102, 255, 0.2),
         0 2px 8px rgba(0, 0, 0, 0.1);
@@ -419,10 +422,11 @@
     .contact-value {
         font-size: 0.9rem;
         font-weight: 700;
-        background: linear-gradient(135deg, var(--text-primary), #0066FF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        -webkit-text-fill-color: initial !important;
+        background-clip: initial !important;
+        color: var(--text-primary) !important;
     }
     
     /* Diseño innovador para social cards - Masonry layout */
@@ -569,6 +573,11 @@
     
     .contact-value {
         font-size: 0.85rem;
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        -webkit-text-fill-color: initial !important;
+        background-clip: initial !important;
+        color: var(--text-primary) !important;
     }
     
     .social-grid {
@@ -617,5 +626,38 @@
     .contact-card::before,
     .social-card::before {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-card:hover,
+    .social-card:hover {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(0, 102, 255, 0.13), 0 1px 4px rgba(0, 0, 0, 0.08) !important;
+        background: var(--bg-card-hover) !important;
+    }
+    .contact-card::before,
+    .social-card::before,
+    .contact-card:hover::before,
+    .social-card:hover::before {
+        display: none !important;
+        opacity: 0 !important;
+        background: none !important;
+    }
+}
+@media (max-width: 480px) {
+    .contact-card:hover,
+    .social-card:hover {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 3px 8px rgba(0, 102, 255, 0.10), 0 1px 2px rgba(0, 0, 0, 0.06) !important;
+        background: var(--bg-card-hover) !important;
+    }
+    .contact-card::before,
+    .social-card::before,
+    .contact-card:hover::before,
+    .social-card:hover::before {
+        display: none !important;
+        opacity: 0 !important;
+        background: none !important;
     }
 }

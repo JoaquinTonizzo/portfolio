@@ -84,26 +84,22 @@ function Contact() {
             
             <div className="contact-cards">
               {contactInfo.map((info, index) => (
-                <div key={index} className="contact-card">
+                <a
+                  key={index}
+                  className="contact-card"
+                  href={info.link}
+                  target={info.link.startsWith('http') ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none' }}
+                >
                   <div className="contact-icon" style={{ backgroundColor: info.color }}>
                     {info.icon}
                   </div>
                   <div className="contact-details">
                     <div className="contact-label">{info.label}</div>
-                    {info.link ? (
-                      <a 
-                        href={info.link} 
-                        target={info.link.startsWith('http') ? "_blank" : "_self"}
-                        rel="noopener noreferrer"
-                        className="contact-value"
-                      >
-                        {info.value}
-                      </a>
-                    ) : (
-                      <div className="contact-value">{info.value}</div>
-                    )}
+                    <div className="contact-value">{info.value}</div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>

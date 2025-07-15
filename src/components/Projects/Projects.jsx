@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaGamepad, FaBox, FaBullseye, FaExternalLinkAlt, FaRocket, FaCalendarAlt, FaCheckCircle, FaMobile, FaGlobe, FaLock } from 'react-icons/fa';
+import { FaGamepad, FaBox, FaBullseye, FaExternalLinkAlt, FaRocket, FaCalendarAlt, FaCheckCircle, FaMobile, FaGlobe, FaLock, FaDatabase, FaUtensils, FaUsers, FaGraduationCap, FaShoppingCart, FaStore } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './Projects.css';
 
@@ -47,74 +47,74 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Lost Galaxian",
-      description: getProjectDescription(1),
-      image: "/portfolio/lost-galaxian.jpg",
-      link: "https://github.com/JoaquinTonizzo/Proyecto-P1",
+      title: "SIGRH+",
+      description: "Sistema de gestión de RRHH con análisis inteligente. Gestiona licencias, rendimiento, CVs y postulaciones utilizando machine learning. Arquitectura full stack con backend en Flask.",
+      image: "/portfolio/sigrh+.png",
+      link: "https://github.com/JoaquinTonizzo/Proyecto-IP",
       demo: "#",
-      tech: ["Java", "Swing", "OOP"],
-      type: <FaGamepad />,
-      year: "2023",
+      tech: ["React", "Tailwind CSS", "Flask", "MySQL"],
+      type: <FaUsers />,
+      year: "2024",
       status: t('projectStatus')
     },
     {
       id: 2,
-      title: "Amazing Logistic",
-      description: getProjectDescription(2),
-      image: "/portfolio/java.png",
-      link: "https://github.com/JoaquinTonizzo/Proyecto-P2",
+      title: "E-commerce React",
+      description: "Tienda online moderna con base de datos en la nube. Frontend en React con catálogo, carrito y checkout. Firebase se utiliza para datos de productos y stock.",
+      image: "/portfolio/ecommerce-react.png",
+      link: "https://github.com/JoaquinTonizzo/corporate-website",
       demo: "#",
-      tech: ["Java", "POO", "MySQL"],
-      type: <FaBox />,
-      year: "2023",
+      tech: ["React", "CSS", "Firebase"],
+      type: <FaShoppingCart />,
+      year: "2024",
       status: t('projectStatus')
     },
     {
       id: 3,
-      title: "Wordle Game",
-      description: getProjectDescription(3),
-      image: "/portfolio/wordle.jpg",
-      link: "https://github.com/JoaquinTonizzo/Proyecto-IP",
+      title: "Gestor Académico PL/pgSQL",
+      description: "Sistema académico con procedimientos almacenados y soporte NoSQL. Integra PostgreSQL con PL/pgSQL y BoltDB en Go para gestión académica.",
+      image: "/portfolio/plpgsql.webp",
+      link: "https://github.com/JoaquinTonizzo/taskflow-mobile",
       demo: "#",
-      tech: ["Python", "Tkinter", "Algoritmos"],
-      type: <FaBullseye />,
+      tech: ["PostgreSQL", "PL/pgSQL", "Go", "BoltDB"],
+      type: <FaGraduationCap />,
       year: "2024",
       status: t('projectStatus')
     },
     {
       id: 4,
-      title: "TaskFlow Mobile",
-      description: getProjectDescription(4),
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
-      link: "https://github.com/JoaquinTonizzo/taskflow-mobile",
+      title: "E-commerce JavaScript",
+      description: "Sitio de comercio electrónico simple con tecnologías web puras. Incluye productos, carrito de compras y cálculo de totales sin usar frameworks.",
+      image: "/portfolio/ecommerce-js.png",
+      link: "https://github.com/JoaquinTonizzo/secure-auth",
       demo: "#",
-      tech: ["React Native", "Firebase", "Redux"],
-      type: <FaMobile />,
+      tech: ["JavaScript", "HTML", "CSS"],
+      type: <FaStore />,
       year: "2024",
       status: t('projectStatus')
     },
     {
       id: 5,
-      title: "Corporate Website",
-      description: getProjectDescription(5),
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-      link: "https://github.com/JoaquinTonizzo/corporate-website",
+      title: "Lost Galaxian",
+      description: "Videojuego espacial con niveles, combate y sistema de puntuación. Desarrollado en Java con enfoque en POO. Incluye mecánicas de exploración, enemigos y efectos visuales.",
+      image: "/portfolio/lost-galaxian.jpg",
+      link: "https://github.com/JoaquinTonizzo/Proyecto-P1",
       demo: "#",
-      tech: ["React", "Node.js", "MongoDB"],
-      type: <FaGlobe />,
-      year: "2024",
+      tech: ["Java", "POO"],
+      type: <FaGamepad />,
+      year: "2023",
       status: t('projectStatus')
     },
     {
       id: 6,
-      title: "SecureAuth System",
-      description: getProjectDescription(6),
-      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&h=300&fit=crop",
-      link: "https://github.com/JoaquinTonizzo/secure-auth",
+      title: "Albor",
+      description: "Sitio web informativo para emprendimiento gastronómico. Página responsive con diseño atractivo que presenta productos, historia del proyecto y formulario de contacto.",
+      image: "/portfolio/albor.png",
+      link: "https://github.com/JoaquinTonizzo/Proyecto-P2",
       demo: "#",
-      tech: ["JWT", "Node.js", "PostgreSQL"],
-      type: <FaLock />,
-      year: "2024",
+      tech: ["HTML", "CSS", "Bootstrap"],
+      type: <FaUtensils />,
+      year: "2023",
       status: t('projectStatus')
     }
   ];
@@ -135,7 +135,11 @@ function Projects() {
           {projects.map(project => (
             <div key={project.id} className="project-card">
               <div className="project-image">
-                <img src={project.image} alt={`${project.title} Proyecto`} />
+                <img 
+                  src={project.image} 
+                  alt={`${project.title} Proyecto`} 
+                  className={project.title === "Lost Galaxian" ? "lost-galaxian" : ""}
+                />
                 <div className="project-overlay">
                   <div className="project-tech-stack">
                     {project.tech.map((tech, index) => (
@@ -165,6 +169,10 @@ function Projects() {
                     <FaRocket />
                     {t('viewProject')}
                   </a>
+                  <div className="project-info">
+                    <span className="project-year">{project.year}</span>
+                    <span className="project-status">Completado</span>
+                  </div>
                 </div>
               </div>
             </div>

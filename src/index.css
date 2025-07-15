@@ -125,3 +125,51 @@ section {
     line-height: var(--line-height-normal);
     letter-spacing: var(--letter-spacing-wide);
 }
+
+/* Custom Scrollbar Styles */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 102, 255, 0.3);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 102, 255, 0.5);
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    background-clip: content-box;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+    background-clip: content-box;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 102, 255, 0.3) transparent;
+}
+
+.dark * {
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}

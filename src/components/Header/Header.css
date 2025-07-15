@@ -10,6 +10,8 @@
     --card-bg: rgba(255, 255, 255, 0.9);
     --card-border: rgba(0, 102, 255, 0.1);
     --shadow-color: rgba(0, 102, 255, 0.1);
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --bg-card-hover: rgba(255, 255, 255, 0.95);
     --aurora-primary: #0066FF;
     --aurora-secondary: #0099FF;
     --aurora-tertiary: #0033CC;
@@ -26,6 +28,8 @@
     --card-bg: rgba(255, 255, 255, 0.08);
     --card-border: rgba(255, 255, 255, 0.15);
     --shadow-color: rgba(0, 0, 0, 0.4);
+    --bg-card: rgba(255, 255, 255, 0.08);
+    --bg-card-hover: rgba(255, 255, 255, 0.12);
     --aurora-primary: #0066FF;
     --aurora-secondary: #0099FF;
     --aurora-tertiary: #0033CC;

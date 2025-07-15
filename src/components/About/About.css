@@ -244,7 +244,7 @@
 
 @keyframes aboutLineGrow {
   from { height: 0; opacity: 0; }
-  to { height: 100%; opacity: 1; }
+  to { height: 90%; opacity: 1; }
 }
 
 /* Quitar la línea individual de las cards anchas */
@@ -334,7 +334,6 @@
     .text-section p {
         text-align: left;
         padding-left: 0;
-        padding-top: 0.5rem;
         flex: 1;
         line-height: 1.6;
     }

@@ -141,6 +141,8 @@
     gap: 1rem;
     position: relative;
     overflow: hidden;
+    height: 140px;
+    min-height: 140px;
 }
 
 .contact-card::before {
@@ -358,6 +360,8 @@
         position: relative;
         overflow: hidden;
         margin: 0;
+        height: 140px;
+        min-height: 140px;
     }
 
     .contact-card::before {
@@ -549,6 +553,8 @@
     .contact-card {
         padding: 1rem;
         border-radius: 14px;
+        height: 140px;
+        min-height: 140px;
     }
     
     .contact-icon {
@@ -573,7 +579,8 @@
     .social-card {
         padding: 1.2rem 0.8rem;
         border-radius: 16px;
-        min-height: 120px;
+        height: 140px;
+        min-height: 140px;
         gap: 0.8rem;
     }
     

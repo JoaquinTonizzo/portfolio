@@ -1,4 +1,4 @@
-import { FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useEffect, useRef } from 'react';
 import './Contact.css';
@@ -52,13 +52,6 @@ function Contact() {
       value: "joaquintonizzo1@gmail.com",
       link: "mailto:joaquintonizzo@gmail.com",
       color: "#0066FF"
-    },
-    {
-      icon: <FaMapMarkerAlt />,
-      label: language === 'es' ? 'Ubicación' : 'Location',
-      value: "Buenos Aires, Argentina",
-      link: null,
-      color: "#0033CC"
     }
   ];
 

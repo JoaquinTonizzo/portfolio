@@ -486,18 +486,33 @@
         flex-wrap: nowrap !important;
         overflow-x: auto;
         gap: clamp(1rem, 2.5vw, 1.2rem);
-        padding: 0.5rem 0;
+        padding: 0.5rem 0 1rem 0;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        scrollbar-width: thin;
+        -ms-overflow-style: auto;
         margin: 0 -0.5rem;
-        padding: 0.5rem;
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
         justify-content: flex-start;
     }
 
     .skills-grid::-webkit-scrollbar {
-        display: none;
+        height: 4px;
+    }
+    
+    .skills-grid::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 2px;
+    }
+    
+    .skills-grid::-webkit-scrollbar-thumb {
+        background: rgba(0, 102, 255, 0.3);
+        border-radius: 2px;
+        transition: background 0.3s ease;
+    }
+    
+    .skills-grid::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 102, 255, 0.5);
     }
 
     .skill-category {
@@ -537,18 +552,33 @@
         flex-wrap: nowrap !important;
         overflow-x: auto;
         gap: clamp(0.8rem, 2vw, 1rem);
-        padding: 0.5rem 0;
+        padding: 0.5rem 0 1rem 0;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        scrollbar-width: thin;
+        -ms-overflow-style: auto;
         margin: 0 -0.5rem;
-        padding: 0.5rem;
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
         justify-content: flex-start;
     }
 
     .dev-stats::-webkit-scrollbar {
-        display: none;
+        height: 4px;
+    }
+    
+    .dev-stats::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 2px;
+    }
+    
+    .dev-stats::-webkit-scrollbar-thumb {
+        background: rgba(0, 102, 255, 0.3);
+        border-radius: 2px;
+        transition: background 0.3s ease;
+    }
+    
+    .dev-stats::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 102, 255, 0.5);
     }
 
     .stat-card {

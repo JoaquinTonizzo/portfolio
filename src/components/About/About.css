@@ -71,6 +71,7 @@
 
 .about-text {
     margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    margin-top: clamp(1rem, 2vw, 1.5rem);
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s ease-out 0.2s;
@@ -83,7 +84,7 @@
 
 /* Eliminar fondo y animación hover de las cards */
 .text-section {
-    margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: clamp(0.5rem, 1.5vw, 0.8rem);
     text-align: left;
     padding: clamp(0.75rem, 2vw, 1rem);
     border-radius: 8px;
@@ -106,7 +107,7 @@
 .icon-text {
     display: flex;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     gap: 0.5rem;
 }
 
@@ -120,9 +121,6 @@
 }
 
 .text-section:hover .section-icon {
-    transform: scale(1.02);
-    color: #0099FF;
-    filter: drop-shadow(0 1px 4px rgba(0, 102, 255, 0.25));
 }
 
 .section-title {
@@ -148,9 +146,14 @@
     line-height: 1.5;
     color: var(--text-secondary);
     margin: 0;
-    padding-left: clamp(1.4rem, 3vw, 1.8rem);
+    padding-left: clamp(1.2rem, 2.5vw, 1.5rem);
     text-align: justify;
     font-weight: 400;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-section:hover p {
+    transform: translateX(2px);
 }
 
 .about-stats {
@@ -227,7 +230,7 @@
 .about-vertical-line {
   position: absolute;
   left: -12px;
-  top: 0;
+  top: 20px;
   bottom: 0;
   width: 4px;
   height: 0;
@@ -244,7 +247,7 @@
 
 @keyframes aboutLineGrow {
   from { height: 0; opacity: 0; }
-  to { height: 90%; opacity: 1; }
+  to { height: calc(90% - 20px); opacity: 1; }
 }
 
 /* Quitar la línea individual de las cards anchas */

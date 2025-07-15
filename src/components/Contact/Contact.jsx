@@ -1,4 +1,4 @@
-import { FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaTelegram } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useEffect, useRef } from 'react';
 import './Contact.css';
@@ -52,6 +52,13 @@ function Contact() {
       value: "Joaquintonizzo1@gmail.com",
       link: "mailto:joaquintonizzo1@gmail.com",
       color: "#0066FF"
+    },
+    {
+      icon: <FaTelegram />,
+      label: language === 'es' ? 'Telegram' : 'Telegram',
+      value: "@joaquintonizzo",
+      link: "https://t.me/joaquintonizzo",
+      color: "#0088CC"
     }
   ];
 

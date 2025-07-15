@@ -106,7 +106,7 @@
     will-change: transform, box-shadow;
     display: flex;
     flex-direction: column;
-    height: 480px;
+    height: 420px;
     width: 320px;
     box-sizing: border-box;
     flex-shrink: 0;
@@ -521,8 +521,7 @@
 
     .project-card {
         flex: 0 0 320px;
-        height: auto;
-        min-height: 370px;
+        height: 420px;
         flex-shrink: 0;
         scroll-snap-align: start;
         margin: 0;
@@ -630,8 +629,7 @@
 
     .project-card {
         flex: 0 0 320px;
-        height: auto;
-        min-height: 340px;
+        height: 420px;
     }
 
     .project-stats {

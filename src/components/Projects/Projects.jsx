@@ -166,17 +166,6 @@ function Projects() {
                     {t('viewProject')}
                   </a>
                 </div>
-
-                <div className="project-stats">
-                  <div className="stat-item">
-                    <FaCalendarAlt />
-                    <span>{project.year}</span>
-                  </div>
-                  <div className="stat-item">
-                    <FaCheckCircle />
-                    <span>{project.status}</span>
-                  </div>
-                </div>
               </div>
             </div>
           ))}

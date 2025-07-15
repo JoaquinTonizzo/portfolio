@@ -205,7 +205,7 @@ function Skills() {
     { 
       number: 100, 
       suffix: "%",
-      label: language === 'es' ? "Pasión por el Código" : language === 'en' ? "Passion for Code" : "Paixão pelo Código",
+      label: language === 'es' ? "Ganas de Aprender" : language === 'en' ? "Eagerness to Learn" : "Vontade de Aprender",
       color: "#96CEB4",
       delay: 600
     }

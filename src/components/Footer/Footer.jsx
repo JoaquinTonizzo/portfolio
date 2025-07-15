@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaBolt, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaBolt, FaEnvelope, FaTelegram } from 'react-icons/fa';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useEffect, useRef } from 'react';
 import './Footer.css';
@@ -34,6 +34,11 @@ function Footer() {
       name: "GitHub", 
       url: "https://github.com/JoaquinTonizzo",
       icon: <FaGithub />
+    },
+    { 
+      name: "Telegram", 
+      url: "https://t.me/joaquintonizzo",
+      icon: <FaTelegram />
     },
     { 
       name: "Email", 

@@ -51,7 +51,7 @@ function Contact() {
     {
       icon: <HiMail />,
       label: language === 'es' ? 'Email' : 'Email',
-      value: "Joaquintonizzo1@gmail.com",
+      value: "joaquintonizzo1@gmail.com",
       link: "https://mail.google.com/mail/?view=cm&fs=1&to=joaquintonizzo1@gmail.com&su=Contacto desde Portfolio&body=Hola Joaquín, me gustaría contactarte...",
       color: "#0066FF"
     },

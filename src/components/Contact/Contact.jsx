@@ -1,4 +1,6 @@
 import { FaEnvelope, FaTelegram } from 'react-icons/fa';
+import { HiMail } from 'react-icons/hi';
+import { SiTelegram } from 'react-icons/si';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useEffect, useRef } from 'react';
 import './Contact.css';
@@ -47,14 +49,14 @@ function Contact() {
 
   const contactInfo = [
     {
-      icon: <FaEnvelope />,
+      icon: <HiMail />,
       label: language === 'es' ? 'Email' : 'Email',
       value: "Joaquintonizzo1@gmail.com",
-      link: "mailto:joaquintonizzo1@gmail.com",
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=joaquintonizzo1@gmail.com&su=Contacto desde Portfolio&body=Hola Joaquín, me gustaría contactarte...",
       color: "#0066FF"
     },
     {
-      icon: <FaTelegram />,
+      icon: <SiTelegram />,
       label: language === 'es' ? 'Telegram' : 'Telegram',
       value: "@joaquintonizzo",
       link: "https://t.me/joaquintonizzo",

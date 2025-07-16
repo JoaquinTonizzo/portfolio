@@ -54,7 +54,7 @@ function Projects() {
       demo: "#",
       tech: ["React", "Tailwind CSS", "Flask", "MySQL"],
       type: <FaUsers />,
-      year: "2024",
+      year: "2025",
       status: t('projectStatus')
     },
     {
@@ -114,7 +114,7 @@ function Projects() {
       demo: "#",
       tech: ["HTML", "CSS", "Bootstrap"],
       type: <FaUtensils />,
-      year: "2023",
+      year: "2024",
       status: t('projectStatus')
     }
   ];

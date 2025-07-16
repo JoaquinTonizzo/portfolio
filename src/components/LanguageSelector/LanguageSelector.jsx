@@ -29,7 +29,6 @@ function LanguageSelector() {
     switch (lang) {
       case 'es': return '🇪🇸';
       case 'en': return '🇺🇸';
-      case 'pt': return '🇧🇷';
       default: return '🇪🇸';
     }
   };
@@ -38,7 +37,6 @@ function LanguageSelector() {
     switch (lang) {
       case 'es': return t('spanish');
       case 'en': return t('english');
-      case 'pt': return t('portuguese');
       default: return t('spanish');
     }
   };
@@ -70,13 +68,6 @@ function LanguageSelector() {
           >
             <span className="language-flag">🇺🇸</span>
             <span className="language-text">{t('english')}</span>
-          </button>
-          <button
-            className={`language-option ${language === 'pt' ? 'active' : ''}`}
-            onClick={() => handleLanguageChange('pt')}
-          >
-            <span className="language-flag">🇧🇷</span>
-            <span className="language-text">{t('portuguese')}</span>
           </button>
         </div>
       )}

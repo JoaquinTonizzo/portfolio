@@ -71,8 +71,7 @@ export const LanguageProvider = ({ children }) => {
       // Language selector
       language: 'Idioma',
       spanish: 'Español',
-      english: 'Inglés',
-      portuguese: 'Portugués'
+      english: 'Inglés'
     },
     en: {
       // Header
@@ -127,64 +126,7 @@ export const LanguageProvider = ({ children }) => {
       // Language selector
       language: 'Language',
       spanish: 'Spanish',
-      english: 'English',
-      portuguese: 'Portuguese'
-    },
-    pt: {
-      // Header
-      about: 'Sobre mim',
-      projects: 'Projetos',
-      skills: 'Habilidades',
-      contact: 'Contato',
-      
-      // Hero
-      title: 'Técnico Universitário em Informática | Desenvolvedor Full-Stack | Estudante de Licenciatura em Sistemas',
-      cvButton: 'Currículo',
-      
-      // About
-      aboutTitle: 'Sobre mim',
-      aboutSubtitle: 'Conheça um pouco mais sobre minha formação, experiência e habilidades que me definem como profissional.',
-      aboutText: '<FaGraduationCap /> Formação Técnica e Universitária\nTécnico em Eletrônica (Instituto Cardenal Stepinac). Técnico Universitário em Informática (UNGS), com conhecimentos em desenvolvimento de software, bancos de dados e análise de sistemas. Atualmente curso a Licenciatura em Sistemas.\n\n<FaLaptopCode /> Formação em Desenvolvimento Full Stack\nEstudante na Coderhouse. Finalizei o módulo de Frontend com React, onde desenvolvi interfaces web modernas. Atualmente curso Backend, focando no desenvolvimento de APIs, gerenciamento de bancos de dados e boas práticas.\n\n<FaGlobe /> Inglês Upper Intermediate (B2)\nCertificado pelo Instituto Superior Cultural Britânico, após quatro anos de formação. Conto com capacidade para compreender documentação técnica, manter conversas fluidas e desenvolver-me em ambientes de trabalho em inglês.',
-      
-      // Projects
-      projectsTitle: 'Meus Projetos',
-      viewProject: 'Ver Projeto',
-      viewCode: 'Ver Código',
-      projectsSubtitle: 'Uma seleção de projetos que demonstram minhas habilidades em desenvolvimento de software, desde jogos interativos até sistemas de gestão empresarial.',
-      projectStatus: 'Concluído',
-      project1Description: 'Um emocionante jogo de aventura espacial desenvolvido em Java com mecânicas de exploração e combate. Inclui sistema de pontuação, múltiplos níveis e efeitos visuais.',
-      project2Description: 'Sistema de gestão logística que utiliza princípios de programação orientada a objetos. Otimiza rotas, gerencia inventários e controla entregas em tempo real.',
-      project3Description: 'Implementação do popular jogo Wordle em Python com interface intuitiva. Inclui sistema de dicas, validação de palavras e estatísticas de partidas.',
-      project4Description: 'Aplicativo móvel de gestão de tarefas com React Native. Inclui sincronização na nuvem, notificações push e design responsivo para iOS e Android.',
-      project5Description: 'Site corporativo moderno desenvolvido com React e Node.js. Inclui painel administrativo, blog integrado e otimização SEO completa.',
-      project6Description: 'Sistema de autenticação seguro com JWT e criptografia de dados. Inclui gestão de funções, recuperação de senhas e auditoria de segurança.',
-      
-      // Skills
-      skillsTitle: 'Habilidades',
-      frontend: 'Frontend',
-      backend: 'Backend',
-      databases: 'Bancos de Dados',
-      tools: 'Ferramentas',
-      
-      // Contact
-      contactTitle: 'Contato',
-      contactSubtitle: 'Gostaria de trabalhar juntos? Vamos conversar!',
-      name: 'Nome',
-      email: 'Email',
-      message: 'Mensagem',
-      send: 'Enviar',
-      namePlaceholder: 'Seu nome',
-      emailPlaceholder: 'seu@email.com',
-      messagePlaceholder: 'Sua mensagem...',
-      
-      // Footer
-      footerText: '© 2024 Joaquin Tonizzo. Todos os direitos reservados.',
-      
-      // Language selector
-      language: 'Idioma',
-      spanish: 'Espanhol',
-      english: 'Inglês',
-      portuguese: 'Português'
+      english: 'English'
     }
   };
 

@@ -175,8 +175,8 @@ function Skills() {
         { name: "PostgreSQL", icon: <SiPostgresql style={{ color: "#336791" }} />, level: "intermediate", color: "#336791" },
         { name: "MongoDB", icon: <SiMongodb style={{ color: "#47A248" }} />, level: "learning", color: "#47A248" },
         { name: "Firebase", icon: <SiFirebase style={{ color: "#FFCA28" }} />, level: "intermediate", color: "#FFCA28" },
-        { name: "Vercel", icon: <SiVercel style={{ color: "#000000" }} />, level: "learning", color: "#000000" }, // Agregado Vercel
-        { name: "Netlify", icon: <SiNetlify style={{ color: "#00C7B7" }} />, level: "learning", color: "#00C7B7" } // Agregado Netlify
+        { name: "Vercel", icon: <SiVercel style={{ color: "#000000" }} />, level: "advanced", color: "#000000" }, // Agregado Vercel
+        { name: "Netlify", icon: <SiNetlify style={{ color: "#00C7B7" }} />, level: "advanced", color: "#00C7B7" } // Agregado Netlify
       ]
     }
   ];
@@ -215,8 +215,7 @@ function Skills() {
   const getSkillsDescription = () => {
     const descriptions = {
       es: "Desarrollador Full-Stack especializado en Java y Python, con experiencia en tecnologías modernas y metodologías ágiles para crear soluciones robustas y escalables.",
-      en: "Full-Stack Developer specialized in Java and Python, with experience in modern technologies and agile methodologies to create robust and scalable solutions.",
-      pt: "Desenvolvedor Full-Stack especializado em Java e Python, com experiência em tecnologias modernas e metodologias ágeis para criar soluções robustas e escaláveis."
+      en: "Full-Stack Developer specialized in Java and Python, with experience in modern technologies and agile methodologies to create robust and scalable solutions."
     };
     return descriptions[language];
   };

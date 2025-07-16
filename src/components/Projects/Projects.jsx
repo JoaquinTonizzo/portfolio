@@ -73,7 +73,7 @@ function Projects() {
       id: 3,
       title: "Gestor Académico PL/pgSQL",
       description: "Sistema académico con procedimientos almacenados y soporte NoSQL. Integra PostgreSQL con PL/pgSQL y BoltDB en Go para gestión académica.",
-      image: "/portfolio/plpgsql.webp",
+      image: "/portfolio/plpgsql.png",
       link: "https://github.com/JoaquinTonizzo/tp-final-bases-de-datos",
       demo: "#",
       tech: ["PostgreSQL", "PL/pgSQL", "Go", "BoltDB"],

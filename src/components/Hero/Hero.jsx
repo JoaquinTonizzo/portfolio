@@ -53,7 +53,7 @@ function Hero() {
             />
             <div className="hero-content">
                 <div className="hero-image" ref={imageRef}>
-                    <img src="/portfolio/yo.png" alt="Joaquin Gabriel Tonizzo" />
+                    <img src="/portfolio/joaquintonizzo.png" alt="Joaquin Gabriel Tonizzo" />
                 </div>
                 <div className="hero-text" ref={textRef}>
                     <h1>Joaquín Gabriel Tonizzo</h1>

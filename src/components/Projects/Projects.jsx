@@ -48,7 +48,7 @@ function Projects() {
     {
       id: 1,
       title: "SIGRH+",
-      description: "Sistema de gestión de RRHH con análisis inteligente. Gestiona licencias, rendimiento, CVs y postulaciones utilizando machine learning. Arquitectura full stack con backend en Flask.",
+      description: t('project1Description'),
       image: "/portfolio/sigrh+.png",
       link: "https://github.com/JoaquinTonizzo/SIGRH-",
       demo: "https://github.com/JoaquinTonizzo/SIGRH",
@@ -60,7 +60,7 @@ function Projects() {
     {
       id: 2,
       title: "E-commerce React",
-      description: "Tienda online moderna con base de datos en la nube. Frontend en React con catálogo, carrito y checkout. Firebase se utiliza para datos de productos y stock.",
+      description: t('project2Description'),
       image: "/portfolio/ecommerce-react.png",
       link: "https://github.com/JoaquinTonizzo/e-commerce-react",
       demo: "https://github.com/JoaquinTonizzo/e-commerce-react",
@@ -72,7 +72,7 @@ function Projects() {
     {
       id: 3,
       title: "Gestor Académico PL/pgSQL",
-      description: "Sistema académico con procedimientos almacenados y soporte NoSQL. Integra PostgreSQL con PL/pgSQL y BoltDB en Go para gestión académica.",
+      description: t('project3Description'),
       image: "/portfolio/plpgsql.png",
       link: "https://github.com/JoaquinTonizzo/tp-final-bases-de-datos",
       demo: "https://github.com/JoaquinTonizzo/tp-final-bases-de-datos",
@@ -84,7 +84,7 @@ function Projects() {
     {
       id: 4,
       title: "E-commerce JavaScript",
-      description: "Sitio de comercio electrónico simple con tecnologías web puras. Incluye productos, carrito de compras y cálculo de totales sin usar frameworks.",
+      description: t('project4Description'),
       image: "/portfolio/ecommerce-js.png",
       link: "https://github.com/JoaquinTonizzo/e-commerce-js",
       demo: "https://github.com/JoaquinTonizzo/e-commerce-js",
@@ -96,7 +96,7 @@ function Projects() {
     {
       id: 5,
       title: "Lost Galaxian",
-      description: "Videojuego espacial con niveles, combate y sistema de puntuación. Desarrollado en Java con enfoque en POO. Incluye mecánicas de exploración, enemigos y efectos visuales.",
+      description: t('project5Description'),
       image: "/portfolio/lost-galaxian.jpg",
       link: "https://github.com/JoaquinTonizzo/lost-galaxian",
       demo: "https://github.com/JoaquinTonizzo/lost-galaxian",
@@ -108,7 +108,7 @@ function Projects() {
     {
       id: 6,
       title: "Albor",
-      description: "Sitio web informativo para emprendimiento gastronómico. Página responsive con diseño atractivo que presenta productos, historia del proyecto y formulario de contacto.",
+      description: t('project6Description'),
       image: "/portfolio/albor.png",
       link: "https://github.com/JoaquinTonizzo/albor-mermeladas",
       demo: "https://github.com/JoaquinTonizzo/albor-mermeladas",

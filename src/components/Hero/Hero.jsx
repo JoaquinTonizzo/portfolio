@@ -1,5 +1,5 @@
 import { useLanguage } from '../../contexts/LanguageContext';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaDownload } from 'react-icons/fa';
 import { useEffect, useRef } from 'react';
 import Aurora from '../Aurora/Aurora';
 import './Hero.css';
@@ -60,7 +60,8 @@ function Hero() {
                     <h2>{t('title')}</h2>
                     <div className="hero-buttons" ref={buttonsRef}>
                         <button className="btn btn-danger" onClick={abrirCV}>
-                            {t('cvButton')}
+                            <FaDownload />
+                            {' '}{t('cvButton')}
                         </button>
                         <button className="btn btn-linkedin" onClick={abrirLinkedIn}>
                             <FaLinkedin />

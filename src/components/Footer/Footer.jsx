@@ -37,7 +37,7 @@ function Footer() {
     },
     { 
       name: "Telegram", 
-      url: "https://t.me/joaquintonizzo",
+      url: "https://t.me/Joaquin12345",
       icon: <FaTelegram />
     },
     { 

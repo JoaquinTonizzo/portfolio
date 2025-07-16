@@ -59,7 +59,7 @@ function Contact() {
       icon: <SiTelegram />,
       label: language === 'es' ? 'Telegram' : 'Telegram',
       value: "@joaquintonizzo",
-      link: "https://t.me/joaquintonizzo",
+      link: "https://t.me/Joaquin12345",
       color: "#0088CC"
     }
   ];

@@ -9,6 +9,7 @@ function About() {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
   const textRef = useRef(null);
+  const verticalLineRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -25,6 +26,7 @@ function About() {
     if (titleRef.current) observer.observe(titleRef.current);
     if (subtitleRef.current) observer.observe(subtitleRef.current);
     if (textRef.current) observer.observe(textRef.current);
+    if (verticalLineRef.current) observer.observe(verticalLineRef.current);
 
     return () => observer.disconnect();
   }, []);
@@ -93,7 +95,7 @@ function About() {
           <p className="about-subtitle" ref={subtitleRef}>{t('aboutSubtitle')}</p>
           <div style={{position: 'relative', display: 'flex', justifyContent: 'center'}}>
             {/* Línea vertical animada para los 3 apartados */}
-            <div className="about-vertical-line" />
+            <div className="about-vertical-line" ref={verticalLineRef} />
             <div className="about-text" ref={textRef} style={{width: '100%'}}>
               {renderAboutText(t('aboutText'))}
             </div>

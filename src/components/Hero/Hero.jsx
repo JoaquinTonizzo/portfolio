@@ -5,7 +5,7 @@ import Aurora from '../Aurora/Aurora';
 import './Hero.css';
 
 function Hero() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const heroRef = useRef(null);
     const imageRef = useRef(null);
     const textRef = useRef(null);
@@ -31,7 +31,8 @@ function Hero() {
     }, []);
 
     const abrirCV = () => {
-        window.open('cv.pdf', '_blank');
+        const cvFile = language === 'es' ? 'Joaquin_Tonizzo_CV_ES.pdf' : 'Joaquin_Tonizzo_CV_EN.pdf';
+        window.open(`/portfolio/${cvFile}`, '_blank');
     }
 
     const abrirLinkedIn = () => {
